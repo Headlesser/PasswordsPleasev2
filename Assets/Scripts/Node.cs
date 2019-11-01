@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-
 public abstract class Node : MonoBehaviour
 {
     public Transform camPos;
@@ -40,17 +39,17 @@ public abstract class Node : MonoBehaviour
         //turn off our own collider
         if(col != null)
         {
-            print(col);
+            print("Off" + col);
             col.enabled = false;
         }
 
         //turn on all reachable node colliders
         foreach (Node node in reachableNodes)
         {
-            //print(node);
+            print("On" + node);
             if(node.col != null)
             {
-                col.enabled = true;
+                node.col.enabled = true;
             }
         }
     }
