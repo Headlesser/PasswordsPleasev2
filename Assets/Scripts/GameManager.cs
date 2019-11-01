@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public Node currentNode;
 
+    public List<string> Inventory = new List<string>();
+
     private void Awake()
     {
         if (ins != null)

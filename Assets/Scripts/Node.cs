@@ -11,6 +11,8 @@ public abstract class Node : MonoBehaviour
     [HideInInspector]
     public Collider col;
 
+    public float camSpeed = 0.5f;
+
     void Start()
     {
         col = GetComponent<Collider>();
@@ -33,20 +35,24 @@ public abstract class Node : MonoBehaviour
         GameManager.ins.currentNode = this;
 
         //move camera
-        Camera.main.transform.position = camPos.position;
-        Camera.main.transform.rotation = camPos.rotation;
+        Sequence seq = DOTween.Sequence();
+        seq.Append(Camera.main.transform.DOMove(camPos.position, camSpeed));
+        seq.Join(Camera.main.transform.DORotate(camPos.rotation.eulerAngles, camSpeed));
+
+        //Camera.main.transform.position = camPos.position;
+        //Camera.main.transform.rotation = camPos.rotation;
 
         //turn off our own collider
         if(col != null)
         {
-            print("Off" + col);
+            //print("Off" + col);
             col.enabled = false;
         }
 
         //turn on all reachable node colliders
         foreach (Node node in reachableNodes)
         {
-            print("On" + node);
+            //print("On" + node);
             if(node.col != null)
             {
                 node.col.enabled = true;
