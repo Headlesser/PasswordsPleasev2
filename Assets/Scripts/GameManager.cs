@@ -6,13 +6,14 @@ public class GameManager : MonoBehaviour
 {
     //http://www.unitygeek.com/unity_c_singleton/
     public static GameManager ins;
-    [HideInInspector]
     public Node currentNode;
 
     public List<Prop> Inventory = new List<Prop>();
     [HideInInspector]
     public Node start;
     public GameObject camLoc;
+
+    public bool readyToGrab;
 
     private void Awake()
     {

@@ -25,6 +25,8 @@ public abstract class Node : MonoBehaviour
 
     public void MoveToNode()
     {
+        GameManager.ins.readyToGrab = false;
+
         //leave the existing node
         if(GameManager.ins.currentNode != null)
         {
@@ -58,6 +60,9 @@ public abstract class Node : MonoBehaviour
                 node.col.enabled = true;
             }
         }
+
+         GameManager.ins.readyToGrab = true;
+        
     }
 
     public void LeaveNode()
