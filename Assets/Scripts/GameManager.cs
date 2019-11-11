@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public Node currentNode;
 
-    public List<string> Inventory = new List<string>();
+    public List<Prop> Inventory = new List<Prop>();
     [HideInInspector]
     public Node start;
     public GameObject camLoc;

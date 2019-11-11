@@ -12,9 +12,9 @@ public class PickUpObject : MonoBehaviour
 
     void PickUp()
     {
-        if (GameManager.ins.currentNode.tag == "Pickup" && !GameManager.ins.Inventory.Contains(GameManager.ins.currentNode.name)) //If the item has the tag pickup, aka, able to be picked up as an item
+        if (GameManager.ins.currentNode.tag == "Pickup" && !GameManager.ins.Inventory.Contains(GameManager.ins.currentNode.GetComponent<Prop>())) //If the item has the tag pickup, aka, able to be picked up as an item
         {
-            GameManager.ins.Inventory.Add(GameManager.ins.currentNode.name); //Add the NAME of that object to the list Inventory
+            GameManager.ins.Inventory.Add(GameManager.ins.currentNode.GetComponent<Prop>()); //Add the NAME of that object to the list Inventory
             
             Destroy(gameObject); 
         }
@@ -22,6 +22,6 @@ public class PickUpObject : MonoBehaviour
 
     void PutDown(string item)
     {
-        GameManager.ins.Inventory.Remove(item);
+        //GameManager.ins.Inventory.Remove(item);
     }
 }
