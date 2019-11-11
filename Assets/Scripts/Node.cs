@@ -52,7 +52,7 @@ public abstract class Node : MonoBehaviour
         //turn on all reachable node colliders
         foreach (Node node in reachableNodes)
         {
-            print("On" + node);
+            //print("On" + node);
             if(node.col != null)
             {
                 node.col.enabled = true;
@@ -65,6 +65,7 @@ public abstract class Node : MonoBehaviour
         //turn off all reachable node colliders
         foreach (Node node in reachableNodes)
         {
+            //print("Leaving" + node);
             if(node.col != null)
             {
                 col.enabled = false;

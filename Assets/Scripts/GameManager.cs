@@ -33,13 +33,20 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         //allow the player to 'back up' from a node by pressing right click
+        //This is triggering twice for some reason if I'm moving back from a prop.
         if (Input.GetMouseButtonDown(1) && currentNode.GetComponent<Prop>() != null)
         {
+            print("My current location is: " + currentNode);
+            print("The location of this node is the: " + currentNode.GetComponent<Prop>().loc);
             currentNode.GetComponent<Prop>().loc.MoveToNode();
+            print("I have changed my current location to: " + currentNode);
         }
-        if(Input.GetMouseButtonDown(1) && currentNode.GetComponent<Location>().loc != null && currentNode.GetComponent<Prop>() == null)
+        if(Input.GetMouseButtonDown(1) && currentNode.GetComponent<Location>() != null) //&& currentNode.GetComponent<Prop>() == null)
         {
+            print("My current location is: " + currentNode);
+            print("The location of this node is the: " + currentNode.GetComponent<Location>().loc);
             currentNode.GetComponent<Location>().loc.MoveToNode();
+            print("I have changed my current location to: " + currentNode);
         }
     }
 }
