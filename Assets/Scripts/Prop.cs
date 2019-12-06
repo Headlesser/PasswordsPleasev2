@@ -7,6 +7,8 @@ public class Prop : Node
     public Location loc;
     public string name;
     public Sprite sprite;
+    public bool isMoveable;
+    public Transform activeLocation;
 
     public void Start()
     {

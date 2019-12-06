@@ -62,6 +62,16 @@ public abstract class Node : MonoBehaviour
         }
 
          GameManager.ins.readyToGrab = true;
+
+        if (GameManager.ins.currentNode.GetComponent<Prop>() != null)
+        {
+            if (GameManager.ins.currentNode.GetComponent<Prop>().isMoveable)
+            {
+                GameManager.ins.currentNode.transform.position = GameManager.ins.currentNode.GetComponent<Prop>().activeLocation.position;
+                GameManager.ins.currentNode.transform.rotation = GameManager.ins.currentNode.GetComponent<Prop>().activeLocation.rotation;
+            }
+            
+        }
         
     }
 
