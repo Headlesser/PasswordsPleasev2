@@ -21,16 +21,10 @@ public class InventoryManager : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void UpdateInventoryUI()
     {
         int i = 0;
-        foreach (Prop item in GameManager.ins.Inventory)
+        foreach (PickUpable item in GameManager.ins.Inventory)
         {
             gameObject.transform.GetChild(i).gameObject.GetComponent<Image>().sprite = item.sprite;
             i++;
@@ -38,4 +32,9 @@ public class InventoryManager : MonoBehaviour
                 break;
         }
     }
+
+    // void Update()
+    // {
+    //     UpdateInventoryUI();
+    // }
 }
