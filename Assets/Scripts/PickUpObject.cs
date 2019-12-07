@@ -28,7 +28,7 @@ public class PickUpObject : MonoBehaviour
                     if(GameManager.ins.currentNode == GetComponent<PickUpable>().loc && GetComponent<PickUpable>().readyToGrab == true)
                     {
                         Debug.Log("Pick Up the object: " + gameObject.name);
-                        PickUp(this.GetComponent<PickUpable>());
+                        PickUp(gameObject);
                     }
                     else
                     {
@@ -54,9 +54,10 @@ public class PickUpObject : MonoBehaviour
         }
     }
 
-    void PickUp(PickUpable obj)
+    void PickUp(GameObject obj)
     {
         GameManager.ins.Inventory.Add(obj);
+        InventoryManager.invManager.UpdateInventoryUI();
         Destroy(gameObject);
         //Debug.Log(GameManager.ins.Inventory[0]);
         // if (true) //If the item has the tag pickup, aka, able to be picked up as an item

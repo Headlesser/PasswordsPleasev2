@@ -9,6 +9,7 @@ public class PasswordChecker : MonoBehaviour
     public string password;
     public GameObject input;
     public GameObject userName;
+    public GameObject incorrectPassword;
     public GameObject window;
 
     // Start is called before the first frame update
@@ -31,6 +32,14 @@ public class PasswordChecker : MonoBehaviour
             input.SetActive(false);
             userName.SetActive(false);
             window.SetActive(true);
+            GetComponent<AudioSource>().Play();
+            incorrectPassword.SetActive(false);
+        }
+        else
+        {
+            GetComponent<InputField>().text = "";
+            incorrectPassword.SetActive(true);
+            incorrectPassword.GetComponent<AudioSource>().Play();
         }
     }
 }

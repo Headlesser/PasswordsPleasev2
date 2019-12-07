@@ -24,9 +24,10 @@ public class InventoryManager : MonoBehaviour
     public void UpdateInventoryUI()
     {
         int i = 0;
-        foreach (PickUpable item in GameManager.ins.Inventory)
+        foreach (GameObject item in GameManager.ins.Inventory)
         {
-            gameObject.transform.GetChild(i).gameObject.GetComponent<Image>().sprite = item.sprite;
+            gameObject.transform.GetChild(i).gameObject.GetComponent<Image>().sprite = item.GetComponent<PickUpable>().sprite;
+            gameObject.transform.GetChild(i).gameObject.SetActive(true);
             i++;
             if (i > transform.childCount)
                 break;
