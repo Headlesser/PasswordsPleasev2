@@ -55,6 +55,7 @@ public class GameManager : MonoBehaviour
             //print("The location of this node is the: " + currentNode.GetComponent<Location>().loc);
             currentNode.GetComponent<Location>().loc.MoveToNode();
             //print("I have changed my current location to: " + currentNode);
+            
             triggeredOnce = true;
         }
     }
