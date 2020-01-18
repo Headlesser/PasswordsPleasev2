@@ -74,12 +74,14 @@ public class DialogueManager : MonoBehaviour
 
         isWaitingForUserInput = false;
 
+        //add characters to the screen until it matches the target speech
         while(speechText.text != targetSpeech)
         {
             speechText.text += targetSpeech[speechText.text.Length];
             yield return new WaitForEndOfFrame();
         }
        
+        //make the continue indication text reappear
         continueText.SetActive(true);
 
         //text finished
