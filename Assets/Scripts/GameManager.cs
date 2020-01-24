@@ -58,5 +58,28 @@ public class GameManager : MonoBehaviour
             
             triggeredOnce = true;
         }
+
+        if (Input.GetMouseButtonDown(0) || Input.GetAxis("Interact") > 0.3f)
+        {
+            CheckHitObj();
+        }
+    }
+
+    void CheckHitObj()
+    {
+        if (true)
+        {
+            RaycastHit hit;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            if (Physics.Raycast(ray, out hit))
+            {
+                if ((hit.transform.gameObject.GetComponent<GenericObject>() != null) && (Vector3.Distance(hit.transform.position, this.transform.position) <= 2f))
+                {
+                    //Debug.Log(hit.transform.name);
+                    hit.transform.gameObject.GetComponent<GenericObject>().Interact();
+                }
+            }
+        }
     }
 }
