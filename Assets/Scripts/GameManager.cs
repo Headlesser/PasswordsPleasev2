@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     public GameObject[] AllPickups; //A list of every object in the scene that can be picked up
     public bool readyToGrab;
 
+    public float minInteractDist;
+
     private void Awake()
     {
         if (ins != null)
@@ -69,12 +71,13 @@ public class GameManager : MonoBehaviour
     {
         if (true)
         {
+            
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
+            
             if (Physics.Raycast(ray, out hit))
             {
-                if ((hit.transform.gameObject.GetComponent<GenericObject>() != null) && (Vector3.Distance(hit.transform.position, this.transform.position) <= 2f))
+                if ((hit.transform.gameObject.GetComponent<GenericObject>() != null) && (Vector3.Distance(hit.transform.position, this.transform.position) <= minInteractDist))
                 {
                     //Debug.Log(hit.transform.name);
                     hit.transform.gameObject.GetComponent<GenericObject>().Interact();
