@@ -9,7 +9,7 @@ public class DialogueManager : MonoBehaviour
 
     public GameObject speechPanel;
     public Text speechText;
-    public GameObject continueText;
+    public GameObject continueOnText;
     public string targetSpeech = "";
 
     public bool isSpeaking { get { return speaking != null; } }
@@ -75,7 +75,7 @@ public class DialogueManager : MonoBehaviour
     {
         speechPanel.SetActive(true);
         targetSpeech = speech;
-        continueText.SetActive(false);
+        continueOnText.SetActive(false);
 
         if (!additive)
         {
@@ -96,7 +96,7 @@ public class DialogueManager : MonoBehaviour
         }
        
         //make the continue indication text reappear
-        continueText.SetActive(true);
+        continueOnText.SetActive(true);
 
         //text finished
         isWaitingForUserInput = true;

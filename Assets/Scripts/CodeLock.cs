@@ -15,10 +15,15 @@ public class CodeLock : MonoBehaviour
 
     public Transform openDoor;
 
+    private AudioSource audioSource;
+    [SerializeField] AudioClip deniedClip;
+    [SerializeField] AudioClip acceptedClip;
+
     private void Start()
     {
         openSpeed = 0.1f;
         codeLength = code.Length;
+        audioSource = GetComponent<AudioSource>();
     }
 
     void CheckCode()
@@ -26,11 +31,14 @@ public class CodeLock : MonoBehaviour
         if (attemptedCode.Length < 4)
         {
             Debug.Log("Not Long Enough");
+            audioSource.PlayOneShot(deniedClip);
         }
         if (attemptedCode == code)
         {
             StartCoroutine(OpenDoor());
             attemptedCode = "Accepted";
+            audioSource.PlayOneShot(acceptedClip);
+            audioSource.Play();
             SetDisplay();
         }
         else
@@ -39,6 +47,7 @@ public class CodeLock : MonoBehaviour
             attemptedCode = "Enter Code";
             SetDisplay();
             attemptedCode = "";
+            audioSource.PlayOneShot(deniedClip);
         }
     }
 
