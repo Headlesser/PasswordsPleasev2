@@ -15,8 +15,6 @@ public class CodeLock : MonoBehaviour
 
     public Transform openDoor;
 
-    public Text displayText;
-
     private void Start()
     {
         openSpeed = 0.1f;
@@ -47,12 +45,11 @@ public class CodeLock : MonoBehaviour
     IEnumerator OpenDoor()
     {
         float timeToStart = Time.time;
-        Quaternion target = Quaternion.Euler(0f, openDoor.transform.rotation.eulerAngles.y + 90f, 0f);
+        Quaternion target = Quaternion.Euler(openDoor.transform.rotation.eulerAngles.x, openDoor.transform.rotation.eulerAngles.y, openDoor.transform.rotation.eulerAngles.z + 90f);
         if (!openDirection)
         {
-            target = Quaternion.Euler(0f, openDoor.transform.rotation.eulerAngles.y - 90f, 0f);
+            target = Quaternion.Euler(openDoor.transform.rotation.eulerAngles.x, openDoor.transform.rotation.eulerAngles.y, openDoor.transform.rotation.eulerAngles.z - 90f);
         }
-
         while (Vector3.Distance(openDoor.transform.rotation.eulerAngles, target.eulerAngles) > 0.5f)
         {
             openDoor.transform.rotation = Quaternion.Lerp(openDoor.transform.rotation, target, (Time.time - timeToStart) * openSpeed);

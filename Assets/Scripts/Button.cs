@@ -21,7 +21,7 @@ public class Button : GenericObject
 
     override public void Interact()
     {
-        print("boop");
+        //print("boop");
         codeLock.PressKey(key);
     }
 }
