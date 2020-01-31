@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
+    public static DialogueManager diagMng;
+
     public GameObject speechPanel;
     public Text speechText;
     public GameObject continueText;
@@ -18,9 +20,21 @@ public class DialogueManager : MonoBehaviour
     public string[] speech;
     int i = 0;
 
+    public void Awake()
+    {
+        if (DialogueManager.diagMng == null)
+        {
+            diagMng = this;
+        }
+        else
+        {
+            Destroy(this);
+        }
+    }
+
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
             if(i < speech.Length)
             {
@@ -42,7 +56,7 @@ public class DialogueManager : MonoBehaviour
     {
         //stop the speaking coroutine before moving onto the next line
         StopSpeaking();
-
+        
         speaking = StartCoroutine(Speaking(speech, false));
     }
 

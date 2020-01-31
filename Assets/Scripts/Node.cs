@@ -25,54 +25,58 @@ public abstract class Node : MonoBehaviour
 
     public void MoveToNode()
     {
-        //GameManager.ins.readyToGrab = false;
-
-        //leave the existing node
-        if(GameManager.ins.currentNode != null)
+        if (!DialogueManager.diagMng.isSpeaking)
         {
-            GameManager.ins.currentNode.LeaveNode();
-        }
 
-        ///set current node
-        GameManager.ins.currentNode = this;
+            //GameManager.ins.readyToGrab = false;
 
-        //move camera
-        Sequence seq = DOTween.Sequence();
-        seq.Append(Camera.main.transform.DOMove(camPos.position, camSpeed));
-        seq.Join(Camera.main.transform.DORotate(camPos.rotation.eulerAngles, camSpeed));
-
-        //Camera.main.transform.position = camPos.position;
-        //Camera.main.transform.rotation = camPos.rotation;
-
-        //turn off our own collider
-        if(col != null)
-        {
-            //print("Off" + col);
-            col.enabled = false;
-        }
-
-        //turn on all reachable node colliders
-        foreach (Node node in reachableNodes)
-        {
-            print("On" + node);
-            if(node.col != null)
+            //leave the existing node
+            if (GameManager.ins.currentNode != null)
             {
-                node.col.enabled = true;
+                GameManager.ins.currentNode.LeaveNode();
             }
+
+            ///set current node
+            GameManager.ins.currentNode = this;
+
+            //move camera
+            Sequence seq = DOTween.Sequence();
+            seq.Append(Camera.main.transform.DOMove(camPos.position, camSpeed));
+            seq.Join(Camera.main.transform.DORotate(camPos.rotation.eulerAngles, camSpeed));
+
+            //Camera.main.transform.position = camPos.position;
+            //Camera.main.transform.rotation = camPos.rotation;
+
+            //turn off our own collider
+            if (col != null)
+            {
+                //print("Off" + col);
+                col.enabled = false;
+            }
+
+            //turn on all reachable node colliders
+            foreach (Node node in reachableNodes)
+            {
+                print("On" + node);
+                if (node.col != null)
+                {
+                    node.col.enabled = true;
+                }
+            }
+
+            //GameManager.ins.readyToGrab = true;
+
+            // if (GameManager.ins.currentNode.GetComponent<Prop>() != null)
+            // {
+            //     if (GameManager.ins.currentNode.GetComponent<Prop>().isMoveable)
+            //     {
+            //         GameManager.ins.currentNode.transform.position = GameManager.ins.currentNode.GetComponent<Prop>().activeLocation.position;
+            //         GameManager.ins.currentNode.transform.rotation = GameManager.ins.currentNode.GetComponent<Prop>().activeLocation.rotation;
+            //     }
+
+            // }
+
         }
-
-         //GameManager.ins.readyToGrab = true;
-
-        // if (GameManager.ins.currentNode.GetComponent<Prop>() != null)
-        // {
-        //     if (GameManager.ins.currentNode.GetComponent<Prop>().isMoveable)
-        //     {
-        //         GameManager.ins.currentNode.transform.position = GameManager.ins.currentNode.GetComponent<Prop>().activeLocation.position;
-        //         GameManager.ins.currentNode.transform.rotation = GameManager.ins.currentNode.GetComponent<Prop>().activeLocation.rotation;
-        //     }
-            
-        // }
-        
     }
 
     public void LeaveNode()
