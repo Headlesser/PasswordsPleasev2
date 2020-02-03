@@ -25,7 +25,7 @@ public abstract class Node : MonoBehaviour
 
     public void MoveToNode()
     {
-        if (!DialogueManager.diagMng.isSpeaking)
+        if (!DialogueManager.diagMng.talking)
         {
 
             //GameManager.ins.readyToGrab = false;

@@ -13,6 +13,7 @@ public class DialogueManager : MonoBehaviour
     public string targetSpeech = "";
 
     public bool isSpeaking { get { return speaking != null; } }
+    public bool talking;
     [HideInInspector] public bool isWaitingForUserInput = false;
     
     Coroutine speaking = null;
@@ -22,6 +23,7 @@ public class DialogueManager : MonoBehaviour
 
     public void Awake()
     {
+        talking = true;
         if (DialogueManager.diagMng == null)
         {
             diagMng = this;
@@ -113,5 +115,6 @@ public class DialogueManager : MonoBehaviour
     {
         StopSpeaking();
         speechPanel.SetActive(false);
+        talking = false;
     }
 }
