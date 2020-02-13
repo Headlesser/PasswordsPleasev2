@@ -65,6 +65,11 @@ public class GameManager : MonoBehaviour
         {
             CheckHitObj();
         }
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            DialogueManager.diagMng.Say("Hi");
+        }
     }
 
     void CheckHitObj()

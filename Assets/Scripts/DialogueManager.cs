@@ -56,6 +56,8 @@ public class DialogueManager : MonoBehaviour
     /// </summary>
     public void Say(string speech)
     {
+        speechPanel.SetActive(true);
+        
         //stop the speaking coroutine before moving onto the next line
         StopSpeaking();
         
@@ -75,7 +77,6 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator Speaking(string speech, bool additive)
     {
-        speechPanel.SetActive(true);
         targetSpeech = speech;
         continueOnText.SetActive(false);
 

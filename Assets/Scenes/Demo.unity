@@ -1478,7 +1478,6 @@ GameObject:
   - component: {fileID: 404203073}
   - component: {fileID: 404203075}
   - component: {fileID: 404203074}
-  - component: {fileID: 404203076}
   m_Layer: 5
   m_Name: DialogueBox
   m_TagString: Untagged
@@ -1544,29 +1543,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 404203072}
   m_CullTransparentMesh: 0
---- !u!114 &404203076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 404203072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d57c176baf9f6b49ac3a5200de10d1a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speechPanel: {fileID: 404203072}
-  speechText: {fileID: 1633710664}
-  continueOnText: {fileID: 194341024}
-  targetSpeech: 
-  talking: 0
-  isWaitingForUserInput: 0
-  speech:
-  - I've finally broken into the office!
-  - Now if only I could find the passcode to that completely inconspicuous safe to
-    the left...
-  - I wonder if there are any clues lying around?
 --- !u!1 &416896710
 GameObject:
   m_ObjectHideFlags: 0
@@ -3692,6 +3668,7 @@ GameObject:
   - component: {fileID: 1062281149}
   - component: {fileID: 1062281148}
   - component: {fileID: 1062281147}
+  - component: {fileID: 1062281151}
   m_Layer: 5
   m_Name: HUD
   m_TagString: Untagged
@@ -3780,6 +3757,29 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1062281151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1062281146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d57c176baf9f6b49ac3a5200de10d1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speechPanel: {fileID: 404203072}
+  speechText: {fileID: 1633710664}
+  continueOnText: {fileID: 194341024}
+  targetSpeech: 
+  talking: 0
+  isWaitingForUserInput: 0
+  speech:
+  - I've finally broken into the office!
+  - Now if only I could find the passcode to that completely inconspicuous safe to
+    the left...
+  - I wonder if there are any clues lying around?
 --- !u!1001 &1066440522
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8959,6 +8959,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Safe
       objectReference: {fileID: 0}
+    - target: {fileID: 6033893171447878806, guid: 89365febb308f004ba0ae5dc082871fe,
+        type: 3}
+      propertyPath: camPos
+      value: 
+      objectReference: {fileID: 1297163592}
+    - target: {fileID: 6033893171447878806, guid: 89365febb308f004ba0ae5dc082871fe,
+        type: 3}
+      propertyPath: loc
+      value: 
+      objectReference: {fileID: 1679107068}
     - target: {fileID: 6033893171447580921, guid: 89365febb308f004ba0ae5dc082871fe,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9014,15 +9024,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6033893171447878806, guid: 89365febb308f004ba0ae5dc082871fe,
-        type: 3}
-      propertyPath: camPos
-      value: 
-      objectReference: {fileID: 1297163592}
-    - target: {fileID: 6033893171447878806, guid: 89365febb308f004ba0ae5dc082871fe,
-        type: 3}
-      propertyPath: loc
-      value: 
-      objectReference: {fileID: 1679107068}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89365febb308f004ba0ae5dc082871fe, type: 3}
