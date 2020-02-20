@@ -68,7 +68,8 @@ public class GameManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.A))
         {
-            DialogueManager.diagMng.Say("Hi");
+            DialogueManager.diagMng.UpdateSpeech(new string[] {"hi", "beep", "boop", "zoop" });
+            DialogueManager.diagMng.Say(DialogueManager.diagMng.speech[0]);
         }
     }
 

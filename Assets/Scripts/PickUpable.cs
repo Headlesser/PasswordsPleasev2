@@ -7,6 +7,7 @@ public class PickUpable : MonoBehaviour
     public Location loc;
     public string name;
     public Sprite sprite;
+    public string[] dialogue;
 
     public bool readyToGrab;
     public void Start()

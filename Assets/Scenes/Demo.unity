@@ -716,6 +716,7 @@ MonoBehaviour:
   loc: {fileID: 1640472780}
   name: 
   sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 3}
+  dialogue: []
   readyToGrab: 0
 --- !u!114 &73913460
 MonoBehaviour:
@@ -2664,59 +2665,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &764749110
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 764749112}
-  - component: {fileID: 764749111}
-  m_Layer: 0
-  m_Name: DialogueManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &764749111
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 764749110}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d57c176baf9f6b49ac3a5200de10d1a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speechPanel: {fileID: 404203072}
-  speechText: {fileID: 1633710664}
-  continueOnText: {fileID: 194341024}
-  targetSpeech: 
-  talking: 0
-  isWaitingForUserInput: 0
-  speech:
-  - I've finally broken into the office! Now if only I could figure out the passcode
-    to that completely inconspicuous safe to the left...
-  - I wonder if there are any clues lying around here?
---- !u!4 &764749112
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 764749110}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 369.3044, y: 43.16915, z: -46.427647}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &765106224
 GameObject:
   m_ObjectHideFlags: 0
@@ -2781,7 +2729,7 @@ Transform:
   - {fileID: 1881672938}
   - {fileID: 1885196695}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &808317246
 PrefabInstance:
@@ -4261,7 +4209,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 3e9872335f9485243acadff6f263b2c0, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 3e9872335f9485243acadff6f263b2c0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4972,6 +4920,8 @@ MonoBehaviour:
   loc: {fileID: 1625291180}
   name: 
   sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 3}
+  dialogue:
+  - hmm, a crudely drawn picture
   readyToGrab: 0
 --- !u!4 &1378648491 stripped
 Transform:
@@ -6211,7 +6161,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 89.288, y: 80.68, z: -37.407}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

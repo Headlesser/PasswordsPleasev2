@@ -29,6 +29,14 @@ public class PickUpObject : MonoBehaviour
                     {
                         Debug.Log("Pick Up the object: " + gameObject.name);
                         PickUp(gameObject);
+
+                        string[] dialogue = gameObject.GetComponent<PickUpable>().dialogue;
+
+                        if (dialogue.Length > 0)
+                        {
+                            DialogueManager.diagMng.UpdateSpeech(dialogue);
+                            DialogueManager.diagMng.Say(dialogue[0]);
+                        }
                     }
                     else
                     {

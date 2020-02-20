@@ -36,7 +36,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        if (talking && (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)))
         {
             if(i < speech.Length)
             {
@@ -46,9 +46,13 @@ public class DialogueManager : MonoBehaviour
             {
                 Close();
             }
-
-            i++;
         }
+    }
+
+    public void UpdateSpeech(string[] newSpeech)
+    {
+        i = 0;
+        speech = newSpeech;
     }
 
     ///<summary>
@@ -56,12 +60,15 @@ public class DialogueManager : MonoBehaviour
     /// </summary>
     public void Say(string speech)
     {
+        
         speechPanel.SetActive(true);
         
         //stop the speaking coroutine before moving onto the next line
         StopSpeaking();
         
         speaking = StartCoroutine(Speaking(speech, false));
+        talking = true;
+        i++;
     }
 
     public void StopSpeaking()
