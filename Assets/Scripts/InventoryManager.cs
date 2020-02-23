@@ -26,6 +26,7 @@ public class InventoryManager : MonoBehaviour
         int i = 0;
         foreach (GameObject item in GameManager.ins.Inventory)
         {
+            print(gameObject.transform.GetChild(i));
             gameObject.transform.GetChild(i).gameObject.GetComponent<Image>().sprite = item.GetComponent<PickUpable>().sprite;
             gameObject.transform.GetChild(i).gameObject.SetActive(true);
             i++;

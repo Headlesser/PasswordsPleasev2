@@ -16,14 +16,14 @@ public class PickUpObject : MonoBehaviour
     void Update()
     {
         if(Input.GetMouseButtonDown(0))
-        { 
+        {
             //print("The current node location: " + GameManager.ins.currentNode);
             //UpdatePickUpColliders();
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
             if(Physics.Raycast(ray, out hit))
             {
-                if(hit.collider.gameObject.tag == "Pickup")
+                if (hit.collider.gameObject.CompareTag("Pickup"))
                 {
                     if(GameManager.ins.currentNode == GetComponent<PickUpable>().loc && GetComponent<PickUpable>().readyToGrab == true)
                     {
@@ -65,14 +65,17 @@ public class PickUpObject : MonoBehaviour
     void PickUp(GameObject obj)
     {
         GameManager.ins.Inventory.Add(obj);
+
         InventoryManager.invManager.UpdateInventoryUI();
-        Destroy(gameObject);
+        gameObject.SetActive(false);
+
+        //Destroy(gameObject);
         //Debug.Log(GameManager.ins.Inventory[0]);
         // if (true) //If the item has the tag pickup, aka, able to be picked up as an item
         // {
         //     GameManager.ins.Inventory.Add(GameManager.ins.currentNode.GetComponent<Prop>()); //Add the NAME of that object to the list Inventory
-            
-        //     Destroy(gameObject); 
+
+        //     Destroy(gameObject);
         // }
     }
 
