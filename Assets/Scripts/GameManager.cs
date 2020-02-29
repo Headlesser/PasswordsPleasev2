@@ -41,11 +41,11 @@ public class GameManager : MonoBehaviour
         //allow the player to 'back up' from a node by pressing right click
         //This is triggering twice for some reason if I'm moving back from a prop.
         if (Input.GetMouseButtonDown(1) && !triggeredOnce)
-        {           
+        {
             //print("I have changed my current location to: " + currentNode);
             triggeredOnce = true;
         }
-        
+
         if (Input.GetMouseButtonDown(0) || Input.GetAxis("Interact") > 0.3f)
         {
             CheckHitObj();
@@ -56,10 +56,10 @@ public class GameManager : MonoBehaviour
     {
         if (true)
         {
-            
+
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            
+
             if (Physics.Raycast(ray, out hit))
             {
                 if ((hit.transform.gameObject.GetComponent<GenericObject>() != null) && (Vector3.Distance(hit.transform.position, this.transform.position) <= minInteractDist))
