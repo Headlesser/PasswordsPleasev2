@@ -19,14 +19,17 @@ public class SoundEffectManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.ins.currentNode.name == "DeskPapers" && soundPlayed == false)
+        //TODO Fix this
+        /*
+        if (GameManager.gameManager.currentNode.name == "DeskPapers" && soundPlayed == false)
         {
             audioSource.PlayOneShot(papersClip);
             soundPlayed = true;
         }
-        else if (GameManager.ins.currentNode.name != "DeskPapers" && soundPlayed == true) 
+        else if (GameManager.gameManager.currentNode.name != "DeskPapers" && soundPlayed == true) 
         {
             soundPlayed = false;
         }
+        */
     }
 }

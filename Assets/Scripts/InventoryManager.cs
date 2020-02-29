@@ -17,14 +17,13 @@ public class InventoryManager : MonoBehaviour
         else
         {
             invManager = this;
-            //DontDestroy(gameObject);
         }
     }
 
     public void UpdateInventoryUI()
     {
         int i = 0;
-        foreach (GameObject item in GameManager.ins.Inventory)
+        foreach (GameObject item in GameManager.gameManager.Inventory)
         {
             print(gameObject.transform.GetChild(i));
             gameObject.transform.GetChild(i).gameObject.GetComponent<Image>().sprite = item.GetComponent<PickUpable>().sprite;
@@ -34,9 +33,4 @@ public class InventoryManager : MonoBehaviour
                 break;
         }
     }
-
-    // void Update()
-    // {
-    //     UpdateInventoryUI();
-    // }
 }

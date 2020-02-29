@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-public abstract class Node : MonoBehaviour
+public class Node : MonoBehaviour
 {
     public Transform camPos;
     public List<Node> reachableNodes = new List<Node>();
@@ -13,6 +13,8 @@ public abstract class Node : MonoBehaviour
 
     public float camSpeed = 0.5f;
 
+    public List<GameObject> collectableObjects;
+
     void Start()
     {
         col = GetComponent<Collider>();
@@ -20,6 +22,7 @@ public abstract class Node : MonoBehaviour
 
     void OnMouseDown()
     {
+        print("beep");
         MoveToNode();
     }
 
@@ -27,25 +30,19 @@ public abstract class Node : MonoBehaviour
     {
         if (!DialogueManager.diagMng.talking)
         {
-
-            //GameManager.ins.readyToGrab = false;
-
             //leave the existing node
-            if (GameManager.ins.currentNode != null)
+            if (GameManager.gameManager.currentNode != null)
             {
-                GameManager.ins.currentNode.LeaveNode();
+                GameManager.gameManager.currentNode.LeaveNode();
             }
 
             ///set current node
-            GameManager.ins.currentNode = this;
+            GameManager.gameManager.currentNode = this;
 
             //move camera
             Sequence seq = DOTween.Sequence();
             seq.Append(Camera.main.transform.DOMove(camPos.position, camSpeed));
             seq.Join(Camera.main.transform.DORotate(camPos.rotation.eulerAngles, camSpeed));
-
-            //Camera.main.transform.position = camPos.position;
-            //Camera.main.transform.rotation = camPos.rotation;
 
             //turn off our own collider
             if (col != null)
@@ -63,19 +60,6 @@ public abstract class Node : MonoBehaviour
                     node.col.enabled = true;
                 }
             }
-
-            //GameManager.ins.readyToGrab = true;
-
-            // if (GameManager.ins.currentNode.GetComponent<Prop>() != null)
-            // {
-            //     if (GameManager.ins.currentNode.GetComponent<Prop>().isMoveable)
-            //     {
-            //         GameManager.ins.currentNode.transform.position = GameManager.ins.currentNode.GetComponent<Prop>().activeLocation.position;
-            //         GameManager.ins.currentNode.transform.rotation = GameManager.ins.currentNode.GetComponent<Prop>().activeLocation.rotation;
-            //     }
-
-            // }
-
         }
     }
 
@@ -84,7 +68,6 @@ public abstract class Node : MonoBehaviour
         //turn off all reachable node colliders
         foreach (Node node in reachableNodes)
         {
-            //print("Leaving" + node);
             if(node.col != null)
             {
                 col.enabled = false;

@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    //http://www.unitygeek.com/unity_c_singleton/
-    public static GameManager ins;
+    public static GameManager gameManager;
     public Node currentNode;
 
     public List<GameObject> Inventory = new List<GameObject>();
@@ -19,14 +18,13 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        if (ins != null)
+        if (gameManager != null)
         {
             Destroy(gameObject);
         }
         else
         {
-            ins = this;
-            //DontDestroy(gameObject);
+            gameManager = this;
         }
     }
 
@@ -40,36 +38,17 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         bool triggeredOnce = false; //Keeps the camera from zooming back twice in a row.
-        //print(triggeredOnce);
         //allow the player to 'back up' from a node by pressing right click
         //This is triggering twice for some reason if I'm moving back from a prop.
-        if (Input.GetMouseButtonDown(1) && currentNode.GetComponent<Prop>() != null && triggeredOnce == false)
-        {
-            //print("My current location is: " + currentNode);
-            //print("The location of this node is the: " + currentNode.GetComponent<Prop>().loc);
-            currentNode.GetComponent<Prop>().loc.MoveToNode();
+        if (Input.GetMouseButtonDown(1) && !triggeredOnce)
+        {           
             //print("I have changed my current location to: " + currentNode);
             triggeredOnce = true;
         }
-        if(Input.GetMouseButtonDown(1) && currentNode.GetComponent<Location>() != null && triggeredOnce == false) //&& currentNode.GetComponent<Prop>() == null)
-        {
-            //print("My current location is: " + currentNode);
-            //print("The location of this node is the: " + currentNode.GetComponent<Location>().loc);
-            currentNode.GetComponent<Location>().loc.MoveToNode();
-            //print("I have changed my current location to: " + currentNode);
-            
-            triggeredOnce = true;
-        }
-
+        
         if (Input.GetMouseButtonDown(0) || Input.GetAxis("Interact") > 0.3f)
         {
             CheckHitObj();
-        }
-
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            DialogueManager.diagMng.UpdateSpeech(new string[] {"hi", "beep", "boop", "zoop" });
-            DialogueManager.diagMng.Say(DialogueManager.diagMng.speech[0]);
         }
     }
 
@@ -85,7 +64,6 @@ public class GameManager : MonoBehaviour
             {
                 if ((hit.transform.gameObject.GetComponent<GenericObject>() != null) && (Vector3.Distance(hit.transform.position, this.transform.position) <= minInteractDist))
                 {
-                    //Debug.Log(hit.transform.name);
                     hit.transform.gameObject.GetComponent<GenericObject>().Interact();
                 }
             }
