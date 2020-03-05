@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3391,7 +3391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5cadd69a54cb934a9723a8d3437392a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camPos: {fileID: 0}
+  camPos: {fileID: 416896711}
   reachableNodes: []
   col: {fileID: 0}
   camSpeed: 0.5
@@ -5029,8 +5029,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5cadd69a54cb934a9723a8d3437392a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camPos: {fileID: 0}
-  reachableNodes: []
+  camPos: {fileID: 1593826301}
+  reachableNodes:
+  - {fileID: 591189038}
   col: {fileID: 0}
   camSpeed: 0.5
   collectableObjects: []
@@ -7123,7 +7124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5cadd69a54cb934a9723a8d3437392a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camPos: {fileID: 0}
+  camPos: {fileID: 1297163592}
   reachableNodes: []
   col: {fileID: 0}
   camSpeed: 0.5
@@ -7624,7 +7625,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1444100479}
   m_Layer: 0
-  m_Name: Loc_CellPhone
+  m_Name: Loc_Tablet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7764,8 +7765,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5cadd69a54cb934a9723a8d3437392a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camPos: {fileID: 0}
-  reachableNodes: []
+  camPos: {fileID: 1813439217}
+  reachableNodes:
+  - {fileID: 1645112869}
+  - {fileID: 1007365370}
   col: {fileID: 0}
   camSpeed: 0.5
   collectableObjects: []
@@ -9027,8 +9030,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5cadd69a54cb934a9723a8d3437392a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camPos: {fileID: 0}
-  reachableNodes: []
+  camPos: {fileID: 1649569045}
+  reachableNodes:
+  - {fileID: 1645112869}
+  - {fileID: 1663792003}
+  - {fileID: 1007365370}
+  - {fileID: 1458512902}
   col: {fileID: 0}
   camSpeed: 0.5
   collectableObjects: []
@@ -9211,7 +9218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5cadd69a54cb934a9723a8d3437392a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camPos: {fileID: 0}
+  camPos: {fileID: 1689609254}
   reachableNodes: []
   col: {fileID: 0}
   camSpeed: 0.5
@@ -9321,8 +9328,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5cadd69a54cb934a9723a8d3437392a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camPos: {fileID: 0}
-  reachableNodes: []
+  camPos: {fileID: 1444100479}
+  reachableNodes:
+  - {fileID: 1007365370}
+  - {fileID: 1458512902}
   col: {fileID: 0}
   camSpeed: 0.5
   collectableObjects: []
@@ -9431,8 +9440,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5cadd69a54cb934a9723a8d3437392a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camPos: {fileID: 0}
-  reachableNodes: []
+  camPos: {fileID: 1732683439}
+  reachableNodes:
+  - {fileID: 1007365370}
   col: {fileID: 0}
   camSpeed: 0.5
   collectableObjects: []
@@ -9534,8 +9544,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5cadd69a54cb934a9723a8d3437392a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camPos: {fileID: 0}
-  reachableNodes: []
+  camPos: {fileID: 90954454}
+  reachableNodes:
+  - {fileID: 1625291180}
+  - {fileID: 1851464074}
+  - {fileID: 1366174943}
+  - {fileID: 1640472780}
   col: {fileID: 0}
   camSpeed: 0.5
   collectableObjects: []
@@ -10249,7 +10263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5cadd69a54cb934a9723a8d3437392a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camPos: {fileID: 0}
+  camPos: {fileID: 1781599130}
   reachableNodes: []
   col: {fileID: 0}
   camSpeed: 0.5
