@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
         if (Input.GetMouseButtonDown(1) && !triggeredOnce)
         {
             print("I have changed my current location to: " + currentNode);
+            currentNode.location.MoveToNode();
             triggeredOnce = true;
         }
 

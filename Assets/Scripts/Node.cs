@@ -15,6 +15,8 @@ public class Node : MonoBehaviour
 
     public List<GameObject> collectableObjects;
 
+    public Node location;
+
     void Start()
     {
         col = GetComponent<Collider>();

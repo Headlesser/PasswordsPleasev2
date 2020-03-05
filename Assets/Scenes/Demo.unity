@@ -3396,6 +3396,7 @@ MonoBehaviour:
   col: {fileID: 0}
   camSpeed: 0.5
   collectableObjects: []
+  location: {fileID: 1007365370}
 --- !u!1 &595425768
 GameObject:
   m_ObjectHideFlags: 0
@@ -5035,6 +5036,7 @@ MonoBehaviour:
   col: {fileID: 0}
   camSpeed: 0.5
   collectableObjects: []
+  location: {fileID: 1625291180}
 --- !u!82 &1007365373
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7129,6 +7131,7 @@ MonoBehaviour:
   col: {fileID: 0}
   camSpeed: 0.5
   collectableObjects: []
+  location: {fileID: 1679107068}
 --- !u!1 &1368994659
 GameObject:
   m_ObjectHideFlags: 0
@@ -7772,6 +7775,7 @@ MonoBehaviour:
   col: {fileID: 0}
   camSpeed: 0.5
   collectableObjects: []
+  location: {fileID: 1625291180}
 --- !u!1001 &1462198626
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9039,6 +9043,7 @@ MonoBehaviour:
   col: {fileID: 0}
   camSpeed: 0.5
   collectableObjects: []
+  location: {fileID: 1679107068}
 --- !u!135 &1625291181
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -9223,6 +9228,7 @@ MonoBehaviour:
   col: {fileID: 0}
   camSpeed: 0.5
   collectableObjects: []
+  location: {fileID: 1679107068}
 --- !u!65 &1640472781
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9335,6 +9341,7 @@ MonoBehaviour:
   col: {fileID: 0}
   camSpeed: 0.5
   collectableObjects: []
+  location: {fileID: 1625291180}
 --- !u!1 &1649569044
 GameObject:
   m_ObjectHideFlags: 0
@@ -9446,6 +9453,7 @@ MonoBehaviour:
   col: {fileID: 0}
   camSpeed: 0.5
   collectableObjects: []
+  location: {fileID: 1625291180}
 --- !u!65 &1663792004
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9553,6 +9561,7 @@ MonoBehaviour:
   col: {fileID: 0}
   camSpeed: 0.5
   collectableObjects: []
+  location: {fileID: 0}
 --- !u!65 &1679107071
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10268,6 +10277,7 @@ MonoBehaviour:
   col: {fileID: 0}
   camSpeed: 0.5
   collectableObjects: []
+  location: {fileID: 1679107068}
 --- !u!65 &1851464075
 BoxCollider:
   m_ObjectHideFlags: 0
