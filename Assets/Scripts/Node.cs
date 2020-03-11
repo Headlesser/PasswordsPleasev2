@@ -24,7 +24,7 @@ public class Node : MonoBehaviour
 
     void OnMouseDown()
     {
-        print("beep");
+        //print("beep");
         MoveToNode();
     }
 
@@ -56,7 +56,7 @@ public class Node : MonoBehaviour
             //turn on all reachable node colliders
             foreach (Node node in reachableNodes)
             {
-                print("On" + node);
+                //print("On" + node);
                 if (node.col != null)
                 {
                     node.col.enabled = true;
