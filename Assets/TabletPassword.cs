@@ -10,18 +10,7 @@ public class TabletPassword : MonoBehaviour
     public Text[] inputField;
     public GameObject lockScreen;
     private bool coroutinActive = false;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public GameObject screenshot;
 
     public void AddInput(string input)
     {
@@ -57,6 +46,7 @@ public class TabletPassword : MonoBehaviour
     public void Unlock()
     {
         lockScreen.SetActive(false);
+        screenshot.SetActive(true);
     }
 
     private IEnumerator ShakeScreen(float waitTime)
