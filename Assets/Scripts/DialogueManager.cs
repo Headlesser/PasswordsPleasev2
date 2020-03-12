@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager diagMng;
 
     public GameObject speechPanel;
-    public Text speechText;
+    public TMP_Text speechText;
+    //public Text speechText;
     public GameObject continueOnText;
     public string targetSpeech = "";
 
