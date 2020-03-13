@@ -12,12 +12,23 @@ public class TabletPassword : MonoBehaviour
     private bool coroutinActive = false;
     public GameObject screenshot;
 
+    AudioSource audio;
+    [SerializeField] AudioClip[] audioClips;
+    [SerializeField] Animation shakeAnimation;
+
+    private void Start()
+    {
+        audio = GetComponent<AudioSource>();
+    }
+
     public void AddInput(string input)
     {
         if (GameManager.gameManager.currentNode == gameObject.GetComponent<Node>() && !coroutinActive)
         {
             attempt += input;
             inputField[attempt.Length - 1].text = input;
+            audio.clip = audioClips[Random.Range(0, audioClips.Length - 1)];
+            audio.Play();
             if (attempt.Length >= password.Length)
                 if (CheckInput())
                     Unlock();
@@ -25,8 +36,9 @@ public class TabletPassword : MonoBehaviour
                 {
                     StartCoroutine(ShakeScreen(1f));
                     //ClearInput();
-                }                    
-        }        
+                    shakeAnimation.Play();
+                }
+        }
     }
 
     public bool CheckInput()
