@@ -7,11 +7,9 @@ public class GameManager : MonoBehaviour
     public static GameManager gameManager;
     public Node currentNode;
 
-    public List<GameObject> Inventory = new List<GameObject>();
     [HideInInspector]
     public Node start;
     public GameObject camLoc;
-    public GameObject[] AllPickups; //A list of every object in the scene that can be picked up
     public bool readyToGrab;
 
     public float minInteractDist;
@@ -32,7 +30,6 @@ public class GameManager : MonoBehaviour
     {
         Camera.main.transform.position = camLoc.transform.position;
         Camera.main.transform.rotation = camLoc.transform.rotation;
-        AllPickups = GameObject.FindGameObjectsWithTag("Pickup");
     }
 
     void Update()

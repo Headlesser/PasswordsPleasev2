@@ -35,9 +35,7 @@ public class PickUpObject : MonoBehaviour
 
     void PickUp(GameObject obj)
     {
-        GameManager.gameManager.Inventory.Add(obj);
-
-        InventoryManager.invManager.UpdateInventoryUI();
+        InventoryManager.invManager.ObtainObject(obj);
         gameObject.SetActive(false);
     }
 }

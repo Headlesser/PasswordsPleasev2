@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager invManager;
+    private List<GameObject> Inventory = new List<GameObject>();
 
     // Start is called before the first frame update
     void Awake()
@@ -23,7 +24,7 @@ public class InventoryManager : MonoBehaviour
     public void UpdateInventoryUI()
     {
         int i = 0;
-        foreach (GameObject item in GameManager.gameManager.Inventory)
+        foreach (GameObject item in Inventory)
         {
             print(gameObject.transform.GetChild(i));
             gameObject.transform.GetChild(i).gameObject.GetComponent<Image>().sprite = item.GetComponent<PickUpable>().sprite;
@@ -32,5 +33,22 @@ public class InventoryManager : MonoBehaviour
             if (i > transform.childCount)
                 break;
         }
+    }
+
+    public bool CheckInventory(GameObject obj)
+    {
+        return Inventory.Contains(obj);
+    }
+
+    public void ObtainObject(GameObject obj)
+    {
+        Inventory.Add(obj);
+        UpdateInventoryUI();
+    }
+
+    public void RemoveObject(GameObject obj)
+    {
+        Inventory.Remove(obj);
+        UpdateInventoryUI();
     }
 }
