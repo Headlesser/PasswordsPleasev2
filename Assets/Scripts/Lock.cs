@@ -2,32 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Lock : MonoBehaviour
+public abstract class Lock : MonoBehaviour
 {
     public GameObject key;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void Unlock()
+    public void Checkkey()
     {
         if (InventoryManager.invManager.CheckInventory(key))
+        {
             InventoryManager.invManager.RemoveObject(key);
+            Unlock();
+        }
         else
             Locked();
     }
 
-    public void Locked()
-    {
-        //Play a message here
-    }
+    public abstract void Locked(); //Used for interaction with object whithout key
+    public abstract void Unlock(); //Used for interaction with object whith key
 }
