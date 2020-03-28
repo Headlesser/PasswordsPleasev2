@@ -11,6 +11,7 @@ public class TabletPassword : MonoBehaviour
     public GameObject lockScreen;
     private bool coroutinActive = false;
     public GameObject screenshot;
+    public GameObject enableTree;
 
     AudioSource audio;
     [SerializeField] AudioClip[] audioClips;
@@ -59,6 +60,10 @@ public class TabletPassword : MonoBehaviour
     {
         lockScreen.SetActive(false);
         screenshot.SetActive(true);
+        GameManager.gameManager.openedTablet = true;
+        GameManager.gameManager.Monologue(GameManager.gameManager.currentNode);
+        enableTree.GetComponent<Node>().enabled = true;
+        enableTree.GetComponent<BoxCollider>().enabled = true;
     }
 
     private IEnumerator ShakeScreen(float waitTime)

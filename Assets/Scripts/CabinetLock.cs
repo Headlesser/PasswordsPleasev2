@@ -31,5 +31,7 @@ public class CabinetLock : Lock
     public override void Unlock()
     {
         door.transform.position = doorDestination.position;
+        GameManager.gameManager.openedFlowerCabinet = true;
+        GameManager.gameManager.Monologue(GameManager.gameManager.currentNode);
     }
 }

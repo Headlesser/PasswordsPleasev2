@@ -14,6 +14,13 @@ public class GameManager : MonoBehaviour
 
     public float minInteractDist;
 
+    //GAME STATE BOOLS
+    public bool visitedPC;
+    public bool visitedFlowerCabinet;
+    public bool openedFlowerCabinet;
+    public bool visitedTablet;
+    public bool openedTablet;
+
     private void Awake()
     {
         if (gameManager != null)
@@ -64,6 +71,48 @@ public class GameManager : MonoBehaviour
                     hit.transform.gameObject.GetComponent<GenericObject>().Interact();
                 }
             }
+        }
+    }
+
+    //Check for dialogue
+    public void Monologue(Node visiting)
+    {
+        print("Check monologue");
+        print(visiting.tag);
+        if(!visitedPC && visiting.tag == "PC")
+        {
+            visitedPC = true;
+            string[] speech = {"It looks like the computer needs a password to log on.", "Huh? It looks like the owner left a clue on this sticky note.", "I wonder if they may have written anything else useful down somewhere..." };
+            DialogueManager.diagMng.UpdateSpeech(speech);
+            DialogueManager.diagMng.Say(speech[0]);
+        }
+        if(!visitedTablet && visiting.tag == "Tablet")
+        {
+            visitedTablet = true;
+            string[] speech = {"This tablet is locked by a 4 digit pin. While it is better than nothing, pins are pretty easy to guess...", "It's usually a birthday or a year of some sort of significance. Maybe there's something like that in this office?" };
+            DialogueManager.diagMng.UpdateSpeech(speech);
+            DialogueManager.diagMng.Say(speech[0]);
+        }
+        if(openedTablet && visiting.tag == "Tablet")
+        {
+            openedTablet = true;
+            string[] speech = {"Looks like that was the correct pin! But what's this?", "The gallery app seems to already be open. It looks like a picture of... this room? There's a key hidden inside of a potted plant somewhere.", "While the tablet did have a pin, taking a photo to remember where your stuff is hidden to really isn't the best idea..." };
+            DialogueManager.diagMng.UpdateSpeech(speech);
+            DialogueManager.diagMng.Say(speech[0]);
+        }
+        if(!visitedFlowerCabinet && visiting.tag == "FlowerCabinet")
+        {
+            visitedFlowerCabinet = true;
+            string[] speech = {"Huh? This cabinet is locked. I need a key to open it.", "I wonder what's inside that could be so important that this person saw fit to hide it..."};
+            DialogueManager.diagMng.UpdateSpeech(speech);
+            DialogueManager.diagMng.Say(speech[0]);
+        }
+        if(openedFlowerCabinet && visiting.tag == "FlowerCabinet")
+        {
+            openedFlowerCabinet = true;
+            string[] speech = {"Alright! That key did the trick, and look! There's a ton of information about flowers in here.", "Pressed MARIGOLD collection, huh? Three guesses what this person's favorite flower is..."};
+            DialogueManager.diagMng.UpdateSpeech(speech);
+            DialogueManager.diagMng.Say(speech[0]);
         }
     }
 }

@@ -13,18 +13,8 @@ public class PasswordChecker : MonoBehaviour
     public GameObject window;
     public AudioSource audio;
     public AudioClip incorrectEntryClip;
+    public GameObject secondWindow;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void CheckPassword()
     {
@@ -34,6 +24,10 @@ public class PasswordChecker : MonoBehaviour
             input.SetActive(false);
             userName.SetActive(false);
             window.SetActive(true);
+            if(secondWindow != null)
+            {
+                secondWindow.SetActive(true);
+            }
             GetComponent<AudioSource>().Play();
             incorrectPassword.SetActive(false);
         }

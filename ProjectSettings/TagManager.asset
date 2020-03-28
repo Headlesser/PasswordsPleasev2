@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Pickup
   - Start
+  - PC
+  - Tablet
+  - FlowerCabinet
+  - Safe
   layers:
   - Default
   - TransparentFX

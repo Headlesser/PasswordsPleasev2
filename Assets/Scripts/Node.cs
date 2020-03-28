@@ -75,6 +75,7 @@ public class Node : MonoBehaviour
 
         if (interactCollider != null)
             interactCollider.enabled = true;
+            GameManager.gameManager.Monologue(GameManager.gameManager.currentNode);
     }
 
     public void LeaveNode()
