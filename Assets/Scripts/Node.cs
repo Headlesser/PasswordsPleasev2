@@ -17,6 +17,8 @@ public class Node : MonoBehaviour
 
     public Node location;
 
+    public BoxCollider interactCollider;
+
     void Start()
     {
         col = GetComponent<Collider>();
@@ -37,9 +39,6 @@ public class Node : MonoBehaviour
             {
                 GameManager.gameManager.currentNode.LeaveNode();
             }
-
-            ///set current node
-            GameManager.gameManager.currentNode = this;
 
             //move camera
             Sequence seq = DOTween.Sequence();
@@ -62,11 +61,27 @@ public class Node : MonoBehaviour
                     node.col.enabled = true;
                 }
             }
+
+            ///set current node
+            GameManager.gameManager.currentNode = this;
+
+            StartCoroutine(ArriveAtNode());
         }
+    }
+
+    public IEnumerator ArriveAtNode() //this was really hacky lmao
+    {
+        yield return new WaitForSeconds(0.1f);
+
+        if (interactCollider != null)
+            interactCollider.enabled = true;
     }
 
     public void LeaveNode()
     {
+        if (interactCollider != null)
+            interactCollider.enabled = false;
+        
         //turn off all reachable node colliders
         foreach (Node node in reachableNodes)
         {

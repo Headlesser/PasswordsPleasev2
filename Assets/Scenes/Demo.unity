@@ -1258,6 +1258,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1a7f55a2be2336948b3ea843d6f01007, type: 2}
+    - target: {fileID: 400004, guid: 3a1ad3eba92335f40b80b088b47f812e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.455
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a1ad3eba92335f40b80b088b47f812e, type: 3}
 --- !u!4 &87580715 stripped
@@ -1272,8 +1276,8 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 87580714}
   m_PrefabAsset: {fileID: 0}
---- !u!135 &87580717
-SphereCollider:
+--- !u!65 &87580717
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1283,8 +1287,8 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.6
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 1.05, y: 0.84, z: 0.73}
+  m_Center: {x: 0, y: 0.45, z: 0}
 --- !u!114 &87580718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1303,6 +1307,13 @@ MonoBehaviour:
   camSpeed: 0.5
   collectableObjects: []
   location: {fileID: 1679107068}
+  interactCollider: {fileID: 361052919}
+--- !u!1 &87580720 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100004, guid: 3a1ad3eba92335f40b80b088b47f812e,
+    type: 3}
+  m_PrefabInstance: {fileID: 87580714}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &90954453
 GameObject:
   m_ObjectHideFlags: 0
@@ -2141,6 +2152,7 @@ MonoBehaviour:
   collectableObjects:
   - {fileID: 158183397}
   location: {fileID: 1640472780}
+  interactCollider: {fileID: 0}
 --- !u!65 &237798704
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2934,6 +2946,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 348213853}
   m_CullTransparentMesh: 0
+--- !u!1 &361052915 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100002, guid: 3a1ad3eba92335f40b80b088b47f812e,
+    type: 3}
+  m_PrefabInstance: {fileID: 87580714}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &361052919
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 361052915}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 0
+  serializedVersion: 2
+  m_Size: {x: 1.0367237, y: 0.5276648, z: 0.87316084}
+  m_Center: {x: 0, y: -8.4280346e-15, z: 0.5930703}
+--- !u!114 &361052920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 361052915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c6fd2133013a6d44b94470a069ad477, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: {fileID: 158183397}
+  locationNode: {fileID: 87580718}
+  door: {fileID: 87580720}
+  doorDestination: {fileID: 491972222}
 --- !u!1 &371758035
 GameObject:
   m_ObjectHideFlags: 0
@@ -3842,6 +3889,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 473268542}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &491972221
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 491972222}
+  m_Layer: 0
+  m_Name: DoorDestination
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &491972222
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491972221}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -0.009, y: 0.23548795, z: 0.1801284}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 87580715}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &515474532
 GameObject:
   m_ObjectHideFlags: 0
@@ -4875,6 +4952,7 @@ MonoBehaviour:
   camSpeed: 0.5
   collectableObjects: []
   location: {fileID: 1007365370}
+  interactCollider: {fileID: 0}
 --- !u!1 &595425768
 GameObject:
   m_ObjectHideFlags: 0
@@ -7544,6 +7622,7 @@ MonoBehaviour:
   camSpeed: 0.5
   collectableObjects: []
   location: {fileID: 1625291180}
+  interactCollider: {fileID: 0}
 --- !u!82 &1007365373
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10341,6 +10420,7 @@ MonoBehaviour:
   camSpeed: 0.5
   collectableObjects: []
   location: {fileID: 1679107068}
+  interactCollider: {fileID: 0}
 --- !u!1 &1368994659
 GameObject:
   m_ObjectHideFlags: 0
@@ -11138,6 +11218,7 @@ MonoBehaviour:
   camSpeed: 0.5
   collectableObjects: []
   location: {fileID: 1625291180}
+  interactCollider: {fileID: 0}
 --- !u!1 &1459414025
 GameObject:
   m_ObjectHideFlags: 0
@@ -12822,6 +12903,7 @@ MonoBehaviour:
   camSpeed: 0.5
   collectableObjects: []
   location: {fileID: 1679107068}
+  interactCollider: {fileID: 0}
 --- !u!135 &1625291181
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -12929,6 +13011,7 @@ MonoBehaviour:
   camSpeed: 0.5
   collectableObjects: []
   location: {fileID: 1679107068}
+  interactCollider: {fileID: 0}
 --- !u!135 &1640472781
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -13042,6 +13125,7 @@ MonoBehaviour:
   camSpeed: 0.5
   collectableObjects: []
   location: {fileID: 1625291180}
+  interactCollider: {fileID: 0}
 --- !u!114 &1645112870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13292,25 +13376,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1663792001}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1663792003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1663792002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5cadd69a54cb934a9723a8d3437392a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camPos: {fileID: 0}
-  reachableNodes:
-  - {fileID: 1007365370}
-  col: {fileID: 0}
-  camSpeed: 0.5
-  collectableObjects: []
-  location: {fileID: 1625291180}
 --- !u!65 &1663792004
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13320,7 +13385,7 @@ BoxCollider:
   m_GameObject: {fileID: 1663792002}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.71944916, y: 0.9642632, z: 0.7648417}
   m_Center: {x: 0.000000059604645, y: 0.4821316, z: -0.00000029802322}
@@ -13499,6 +13564,7 @@ MonoBehaviour:
   camSpeed: 0.5
   collectableObjects: []
   location: {fileID: 0}
+  interactCollider: {fileID: 0}
 --- !u!65 &1679107071
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14179,6 +14245,7 @@ MonoBehaviour:
   camSpeed: 0.5
   collectableObjects: []
   location: {fileID: 1679107068}
+  interactCollider: {fileID: 0}
 --- !u!65 &1851464075
 BoxCollider:
   m_ObjectHideFlags: 0

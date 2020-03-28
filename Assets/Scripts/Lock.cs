@@ -2,13 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Lock : MonoBehaviour
+public abstract class Lock : GenericObject
 {
     public GameObject key;
+    public Node locationNode;
+
+    public override void Interact()
+    {
+        Checkkey();
+    }
 
     public void Checkkey()
     {
-        if (InventoryManager.invManager.CheckInventory(key))
+        print(GameManager.gameManager.currentNode.ToString());
+        if (InventoryManager.invManager.CheckInventory(key) && GameManager.gameManager.currentNode == locationNode)
         {
             InventoryManager.invManager.RemoveObject(key);
             Unlock();

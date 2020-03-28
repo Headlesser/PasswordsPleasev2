@@ -54,7 +54,6 @@ public class GameManager : MonoBehaviour
     {
         if (true)
         {
-
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
