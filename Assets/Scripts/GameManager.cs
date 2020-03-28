@@ -16,10 +16,12 @@ public class GameManager : MonoBehaviour
 
     //GAME STATE BOOLS
     public bool visitedPC;
+    public bool openedPC;
     public bool visitedFlowerCabinet;
     public bool openedFlowerCabinet;
     public bool visitedTablet;
     public bool openedTablet;
+    public bool visitedDiploma;
 
     private void Awake()
     {
@@ -86,6 +88,12 @@ public class GameManager : MonoBehaviour
             DialogueManager.diagMng.UpdateSpeech(speech);
             DialogueManager.diagMng.Say(speech[0]);
         }
+        if(openedPC && visiting.tag == "PC")
+        {
+            string[] speech = {"That was too easy! While the clue was reasonable, it's never a good idea to write your password down, especially in a place that's right out in the open. Writing it down on paper defeats the entire purpose of having a clue anyway.", "The second screen has turned on and there's... three security questions?! That's three times the work I have to do!", "Well, considering this person's habits, maybe they left some more clues to the answers laying about their office..." };
+            DialogueManager.diagMng.UpdateSpeech(speech);
+            DialogueManager.diagMng.Say(speech[0]);
+        }
         if(!visitedTablet && visiting.tag == "Tablet")
         {
             visitedTablet = true;
@@ -95,7 +103,6 @@ public class GameManager : MonoBehaviour
         }
         if(openedTablet && visiting.tag == "Tablet")
         {
-            openedTablet = true;
             string[] speech = {"Looks like that was the correct pin! But what's this?", "The gallery app seems to already be open. It looks like a picture of... this room? There's a key hidden inside of a potted plant somewhere.", "While the tablet did have a pin, taking a photo to remember where your stuff is hidden to really isn't the best idea..." };
             DialogueManager.diagMng.UpdateSpeech(speech);
             DialogueManager.diagMng.Say(speech[0]);
@@ -109,8 +116,14 @@ public class GameManager : MonoBehaviour
         }
         if(openedFlowerCabinet && visiting.tag == "FlowerCabinet")
         {
-            openedFlowerCabinet = true;
             string[] speech = {"Alright! That key did the trick, and look! There's a ton of information about flowers in here.", "Pressed MARIGOLD collection, huh? Three guesses what this person's favorite flower is..."};
+            DialogueManager.diagMng.UpdateSpeech(speech);
+            DialogueManager.diagMng.Say(speech[0]);
+        }
+        if(!visitedDiploma && visiting.tag == "Diploma")
+        {
+            visitedDiploma = true;
+            string[] speech = {"This looks like a college diploma from Indiana University for... Underwater Basket Weaving?", "Well, I can't say I wish I didn't know how to do that. I wonder if this person has an online store?"};
             DialogueManager.diagMng.UpdateSpeech(speech);
             DialogueManager.diagMng.Say(speech[0]);
         }

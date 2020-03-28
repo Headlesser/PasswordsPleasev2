@@ -10563,10 +10563,12 @@ MonoBehaviour:
   readyToGrab: 0
   minInteractDist: 10
   visitedPC: 0
+  openedPC: 0
   visitedFlowerCabinet: 0
   openedFlowerCabinet: 0
   visitedTablet: 0
   openedTablet: 0
+  visitedDiploma: 0
 --- !u!1 &1358564239
 GameObject:
   m_ObjectHideFlags: 0
@@ -13879,7 +13881,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1781599130}
   m_Layer: 0
-  m_Name: Loc_SafePainting
+  m_Name: Loc_Diploma
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14416,7 +14418,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 172082, guid: 074728566132335428608c1b7e7f1f14, type: 3}
       propertyPath: m_Name
-      value: SafePainting
+      value: Diploma
+      objectReference: {fileID: 0}
+    - target: {fileID: 172082, guid: 074728566132335428608c1b7e7f1f14, type: 3}
+      propertyPath: m_TagString
+      value: Diploma
       objectReference: {fileID: 0}
     - target: {fileID: 482970, guid: 074728566132335428608c1b7e7f1f14, type: 3}
       propertyPath: m_LocalPosition.x

@@ -22,9 +22,9 @@ public class CabinetLock : Lock
 
     public override void Locked()
     {
-        string[] speech = { "", "" };
-        DialogueManager.diagMng.UpdateSpeech(speech);
-        DialogueManager.diagMng.Say(speech[0]);
+        // string[] speech = { "", "" };
+        // DialogueManager.diagMng.UpdateSpeech(speech);
+        // DialogueManager.diagMng.Say(speech[0]);
         //Display message here
     }
 

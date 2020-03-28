@@ -27,6 +27,8 @@ public class PasswordChecker : MonoBehaviour
             if(secondWindow != null)
             {
                 secondWindow.SetActive(true);
+                GameManager.gameManager.openedPC = true;
+                GameManager.gameManager.Monologue(GameManager.gameManager.currentNode);
             }
             GetComponent<AudioSource>().Play();
             incorrectPassword.SetActive(false);

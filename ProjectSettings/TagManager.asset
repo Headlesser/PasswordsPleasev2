@@ -10,6 +10,7 @@ TagManager:
   - Tablet
   - FlowerCabinet
   - Safe
+  - Diploma
   layers:
   - Default
   - TransparentFX
