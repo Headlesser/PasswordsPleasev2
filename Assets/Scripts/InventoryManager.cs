@@ -7,6 +7,7 @@ public class InventoryManager : MonoBehaviour
 {
     public static InventoryManager invManager;
     private List<GameObject> Inventory = new List<GameObject>();
+    private int itemSelected = -1;
 
     // Start is called before the first frame update
     void Awake()
@@ -26,18 +27,40 @@ public class InventoryManager : MonoBehaviour
         int i = 0;
         foreach (GameObject item in Inventory)
         {
-            print(gameObject.transform.GetChild(i));
+            //print(gameObject.transform.GetChild(i));
             gameObject.transform.GetChild(i).gameObject.GetComponent<Image>().sprite = item.GetComponent<PickUpable>().sprite;
             gameObject.transform.GetChild(i).gameObject.SetActive(true);
+            //gameObject.transform.GetChild(i).GetComponent<UnityEngine.UI.Button>().transition = 
             i++;
             if (i > transform.childCount)
                 break;
         }
     }
 
-    public bool CheckInventory(GameObject obj)
+    public bool CheckInventory(GameObject obj, bool consumed)
     {
-        return Inventory.Contains(obj);
+        if (itemSelected == -1)
+        {
+            return false;
+        }
+
+        bool itemHeld = Inventory[itemSelected].Equals(obj);
+        if (itemHeld)
+        {
+            if (consumed)
+            {
+                RemoveObject(Inventory[itemSelected]);
+                UpdateInventoryUI();
+            }
+            itemSelected = -1;
+            return true;
+        }
+        else
+        {
+            itemSelected = -1;
+            return false;
+        }
+        
     }
 
     public void ObtainObject(GameObject obj)
@@ -50,5 +73,10 @@ public class InventoryManager : MonoBehaviour
     {
         Inventory.Remove(obj);
         UpdateInventoryUI();
+    }
+
+    public void InventorySelected(int slot)
+    {
+        itemSelected = slot;
     }
 }

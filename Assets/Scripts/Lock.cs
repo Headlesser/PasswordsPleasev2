@@ -15,7 +15,7 @@ public abstract class Lock : GenericObject
     public void Checkkey()
     {
         print(GameManager.gameManager.currentNode.ToString());
-        if (InventoryManager.invManager.CheckInventory(key) && GameManager.gameManager.currentNode == locationNode)
+        if (InventoryManager.invManager.CheckInventory(key, true) && GameManager.gameManager.currentNode == locationNode)
         {
             InventoryManager.invManager.RemoveObject(key);
             Unlock();
