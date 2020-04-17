@@ -8,6 +8,8 @@ public class InventoryManager : MonoBehaviour
     public static InventoryManager invManager;
     private List<GameObject> Inventory = new List<GameObject>();
     private int itemSelected = -1;
+    public Color unselectedColor;
+    public Color selectedColor;
 
     // Start is called before the first frame update
     void Awake()
@@ -27,10 +29,8 @@ public class InventoryManager : MonoBehaviour
         int i = 0;
         foreach (GameObject item in Inventory)
         {
-            //print(gameObject.transform.GetChild(i));
-            gameObject.transform.GetChild(i).gameObject.GetComponent<Image>().sprite = item.GetComponent<PickUpable>().sprite;
-            gameObject.transform.GetChild(i).gameObject.SetActive(true);
-            //gameObject.transform.GetChild(i).GetComponent<UnityEngine.UI.Button>().transition = 
+            gameObject.transform.GetChild(i).GetChild(0).gameObject.GetComponent<Image>().sprite = item.GetComponent<PickUpable>().sprite;
+            gameObject.transform.GetChild(i).GetChild(0).gameObject.SetActive(true);
             i++;
             if (i > transform.childCount)
                 break;
@@ -52,11 +52,13 @@ public class InventoryManager : MonoBehaviour
                 RemoveObject(Inventory[itemSelected]);
                 UpdateInventoryUI();
             }
+            gameObject.transform.GetChild(itemSelected).GetComponent<Image>().color = unselectedColor;
             itemSelected = -1;
             return true;
         }
         else
         {
+            gameObject.transform.GetChild(itemSelected).GetComponent<Image>().color = unselectedColor;
             itemSelected = -1;
             return false;
         }
@@ -77,6 +79,18 @@ public class InventoryManager : MonoBehaviour
 
     public void InventorySelected(int slot)
     {
-        itemSelected = slot;
+        if (itemSelected != slot - 1) //if an item other than the one currently selected was clicked
+        {
+            if (itemSelected != -1)
+                gameObject.transform.GetChild(itemSelected).GetComponent<Image>().color = unselectedColor; //set previously selected item back to unselected
+            itemSelected = slot - 1;
+            gameObject.transform.GetChild(slot - 1).GetComponent<Image>().color = selectedColor; //set newly selected item to selected color
+        }
+        else
+        {
+            gameObject.transform.GetChild(itemSelected).GetComponent<Image>().color = unselectedColor;
+            itemSelected = -1; //set itemSelected to its null value
+        }
+        
     }
 }
