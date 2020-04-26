@@ -1582,6 +1582,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b409837b3725b574ca909cc19e543d7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &128026440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128026437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b30423f6d3362448a0675bcc1be84cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: 
+  sprite: {fileID: 21300094, guid: 148a7416d4c344a42bb28cb23ee31708, type: 3}
+  dialogue: []
+  readyToGrab: 0
+--- !u!135 &128026441
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128026437}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.09650252
+  m_Center: {x: -0.08626285, y: -0.055319995, z: -0.009789392}
 --- !u!1001 &130339826
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1992,6 +2021,14 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 13e070a963d5ae54c959c035f9123eb2, type: 3}
       propertyPath: m_Name
       value: Bananamid
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 13e070a963d5ae54c959c035f9123eb2, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 13e070a963d5ae54c959c035f9123eb2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 13e070a963d5ae54c959c035f9123eb2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5507,6 +5544,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b409837b3725b574ca909cc19e543d7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &612996900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612996897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b30423f6d3362448a0675bcc1be84cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: 
+  sprite: {fileID: 21300094, guid: 148a7416d4c344a42bb28cb23ee31708, type: 3}
+  dialogue: []
+  readyToGrab: 0
+--- !u!135 &612996901
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612996897}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.08514009
+  m_Center: {x: 0.036941987, y: -0.12065767, z: 0.012773643}
 --- !u!1 &614714165
 GameObject:
   m_ObjectHideFlags: 0
@@ -6800,6 +6866,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BananaBottom
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 8e1b894638a574f4f886895bf62541ae, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8e1b894638a574f4f886895bf62541ae, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.009333293
@@ -7836,9 +7906,9 @@ Transform:
   - {fileID: 1843964153}
   - {fileID: 473268543}
   - {fileID: 873719250}
-  - {fileID: 1766960719}
   - {fileID: 130339827}
   - {fileID: 1104731877}
+  - {fileID: 1766960719}
   - {fileID: 532620903}
   - {fileID: 1387013213}
   - {fileID: 925826489}
@@ -11413,6 +11483,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unselectedColor: {r: 1, g: 1, b: 1, a: 1}
   selectedColor: {r: 1, g: 0.9451673, b: 0, a: 1}
+  inventorySlots:
+  - {fileID: 1572118384}
+  - {fileID: 424233852}
+  - {fileID: 893650468}
+  - {fileID: 1064331841}
+  - {fileID: 1550690100}
+  - {fileID: 1147614919}
+  - {fileID: 785520755}
 --- !u!114 &1260055735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12012,6 +12090,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 0573d4cc805c33b47a5314f464de5b8d, type: 3}
       propertyPath: m_Name
       value: BananaTop
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 0573d4cc805c33b47a5314f464de5b8d, type: 3}
+      propertyPath: m_TagString
+      value: Pickup
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0573d4cc805c33b47a5314f464de5b8d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14646,8 +14728,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 158183398}
-  - {fileID: 1209480188}
   - {fileID: 1325668100}
+  - {fileID: 1209480188}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15060,7 +15142,8 @@ MonoBehaviour:
   - {fileID: 237798703}
   col: {fileID: 0}
   camSpeed: 0.5
-  collectableObjects: []
+  collectableObjects:
+  - {fileID: 158183397}
   location: {fileID: 1679107068}
   interactCollider: {fileID: 0}
 --- !u!135 &1640472781
@@ -15682,6 +15765,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b409837b3725b574ca909cc19e543d7d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1723664564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723664562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b30423f6d3362448a0675bcc1be84cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: 
+  sprite: {fileID: 21300094, guid: 148a7416d4c344a42bb28cb23ee31708, type: 3}
+  dialogue: []
+  readyToGrab: 0
+--- !u!135 &1723664565
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723664562}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.11570668
+  m_Center: {x: -0.08677602, y: 0.15611953, z: 0.0025532097}
 --- !u!1001 &1730868281
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17634,19 +17746,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.37865928, y: 0.7732116, z: 0.032818556}
   m_Center: {x: 0.000000014901161, y: 0.3866058, z: 0.17291987}
---- !u!65 &1902780479
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1902780477}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.039972782, y: 0.77248466, z: 0.3786583}
-  m_Center: {x: -0.16934323, y: 0.38624233, z: 0}
 --- !u!1 &1931364730
 GameObject:
   m_ObjectHideFlags: 0

@@ -73,6 +73,11 @@ public class Node : MonoBehaviour
     {
         yield return new WaitForSeconds(0.1f);
 
+        foreach(GameObject obj in collectableObjects)
+        {
+            obj.GetComponent<PickUpable>().readyToGrab = true;
+        }
+
         if (interactCollider != null)
             interactCollider.enabled = true;
             GameManager.gameManager.Monologue(GameManager.gameManager.currentNode);
@@ -82,7 +87,12 @@ public class Node : MonoBehaviour
     {
         if (interactCollider != null)
             interactCollider.enabled = false;
-        
+
+        foreach (GameObject obj in collectableObjects)
+        {
+            obj.GetComponent<PickUpable>().readyToGrab = false;
+        }
+
         //turn off all reachable node colliders
         foreach (Node node in reachableNodes)
         {

@@ -79,8 +79,8 @@ public class GameManager : MonoBehaviour
     //Check for dialogue
     public void Monologue(Node visiting)
     {
-        print("Check monologue");
-        print(visiting.tag);
+        //print("Check monologue");
+        //print(visiting.tag);
         if(!visitedPC && visiting.tag == "PC")
         {
             visitedPC = true;

@@ -15,7 +15,7 @@ public class PickUpObject : MonoBehaviour
             {
                 if (hit.collider.gameObject.CompareTag("Pickup"))
                 {
-                    if(GameManager.gameManager.currentNode.collectableObjects.Contains(hit.collider.gameObject))
+                    if (hit.collider.gameObject.GetComponent<PickUpable>().readyToGrab)
                     {
                         Debug.Log("Pick Up the object: " + gameObject.name);
                         PickUp(gameObject);
