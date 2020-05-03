@@ -19,14 +19,17 @@ public class Node : MonoBehaviour
 
     public BoxCollider interactCollider;
 
+    public bool visited;
+    public string[] monologue;
+
     void Start()
     {
+        visited = false;
         col = GetComponent<Collider>();
     }
 
     void OnMouseDown()
     {
-        //print("beep");
         MoveToNode();
     }
 
@@ -80,7 +83,9 @@ public class Node : MonoBehaviour
 
         if (interactCollider != null)
             interactCollider.enabled = true;
-            GameManager.gameManager.Monologue(GameManager.gameManager.currentNode);
+
+        GameManager.gameManager.Monologue(GameManager.gameManager.currentNode);
+        visited = true;
     }
 
     public void LeaveNode()
