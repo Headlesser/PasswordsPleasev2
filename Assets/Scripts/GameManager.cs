@@ -79,15 +79,15 @@ public class GameManager : MonoBehaviour
     //Check for dialogue
     public void Monologue(Node visiting)
     {
-        //print("Check monologue");
-        //print(visiting.tag);
-        if(!visitedPC && visiting.tag == "PC")
+        if(!visiting.visited && visiting.monologue.Length > 0) //Check to see if current node has been visited and if it has a monologue to play
         {
+            string[] speech = visiting.monologue;
             visitedPC = true;
-            string[] speech = {"It looks like the computer needs a password to log on. While I could try the brute force method, that could take quite a while if it's not something obvious.", "Huh? The owner left a clue on this sticky note.", "I wonder if they may have written anything else useful down somewhere... I should probably look around before I try guessing." };
+            //string[] speech = {"It looks like the computer needs a password to log on. While I could try the brute force method, that could take quite a while if it's not something obvious.", "Huh? The owner left a clue on this sticky note.", "I wonder if they may have written anything else useful down somewhere... I should probably look around before I try guessing." };
             DialogueManager.diagMng.UpdateSpeech(speech);
             DialogueManager.diagMng.Say(speech[0]);
         }
+        /*
         if(openedPC && visiting.tag == "PC")
         {
             string[] speech = {"That was too easy! While the clue was reasonable, it's never a good idea to write your password down, especially in a place that's right out in the open. Writing it down on paper defeats the entire purpose of having a clue anyway.", "The second screen has turned on and there's... three security questions?! That's three times the work I have to do!", "Well, considering this person's habits, maybe they left some more clues to the answers laying about their office..." };
@@ -128,5 +128,6 @@ public class GameManager : MonoBehaviour
             DialogueManager.diagMng.UpdateSpeech(speech);
             DialogueManager.diagMng.Say(speech[0]);
         }
+        */
     }
 }
