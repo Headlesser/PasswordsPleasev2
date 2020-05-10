@@ -11,6 +11,7 @@ public class InventoryManager : MonoBehaviour
     public Color unselectedColor;
     public Color selectedColor;
     public GameObject[] inventorySlots;
+    public Sprite emptySlotSprite;
 
     // Start is called before the first frame update
     void Awake()
@@ -22,19 +23,23 @@ public class InventoryManager : MonoBehaviour
         else
         {
             invManager = this;
-        }
+            UpdateInventoryUI();
+        }        
     }
 
     public void UpdateInventoryUI()
     {
-        int i = 0;
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            inventorySlots[i].GetComponent<Image>().sprite = emptySlotSprite;
+        }
+
+        int j = 0;
         foreach (GameObject item in Inventory)
         {
-            //print(item.name);
-            inventorySlots[i].GetComponent<Image>().sprite = item.GetComponent<PickUpable>().sprite;
-            //inventorySlots[i].gameObject.SetActive(true);
-            i++;
-            if (i > transform.childCount)
+            inventorySlots[j].GetComponent<Image>().sprite = item.GetComponent<PickUpable>().sprite;
+            j++;
+            if (j > transform.childCount)
                 break;
         }
     }

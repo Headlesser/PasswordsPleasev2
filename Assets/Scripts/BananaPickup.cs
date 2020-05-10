@@ -26,7 +26,6 @@ public class BananaPickup : PickUpable
             InventoryManager.invManager.ObtainObject(finishedBanana);
             DialogueManager.diagMng.UpdateSpeech(finishedBanana.GetComponent<PickUpable>().dialogue);
             DialogueManager.diagMng.Say(finishedBanana.GetComponent<PickUpable>().dialogue[0]);
-            InventoryManager.invManager.UpdateInventoryUI();
             InventoryManager.invManager.RemoveObject(gameObject);
         }
     }
