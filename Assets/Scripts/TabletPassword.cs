@@ -63,6 +63,7 @@ public class TabletPassword : MonoBehaviour
         GameManager.gameManager.openedTablet = true;
         GameManager.gameManager.Monologue(GameManager.gameManager.currentNode);
         enableKey.SetActive(true);
+        Debug.Log(enableKey.activeSelf);
 
     }
 

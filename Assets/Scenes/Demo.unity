@@ -1603,7 +1603,10 @@ MonoBehaviour:
   location: {fileID: 1366174943}
   interactCollider: {fileID: 0}
   visited: 0
-  monologue: []
+  repeatable: 1
+  monologue:
+  - 'What an exquisitely crafted puzzle cube. '
+  - ' I can practically smell the anger and frustration wafting from its jumbled form.'
 --- !u!65 &81439144
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1836,6 +1839,7 @@ MonoBehaviour:
   location: {fileID: 1679107068}
   interactCollider: {fileID: 361052919}
   visited: 0
+  repeatable: 0
   monologue: []
 --- !u!1 &87580720 stripped
 GameObject:
@@ -3329,6 +3333,7 @@ MonoBehaviour:
   location: {fileID: 1640472780}
   interactCollider: {fileID: 0}
   visited: 0
+  repeatable: 0
   monologue: []
 --- !u!65 &237798704
 BoxCollider:
@@ -4140,7 +4145,9 @@ MonoBehaviour:
   location: {fileID: 1684309128}
   interactCollider: {fileID: 0}
   visited: 0
-  monologue: []
+  repeatable: 1
+  monologue:
+  - I'd rather not get any closer than this, thanks.
 --- !u!1 &348213853
 GameObject:
   m_ObjectHideFlags: 0
@@ -6029,7 +6036,15 @@ MonoBehaviour:
   location: {fileID: 1679107068}
   interactCollider: {fileID: 0}
   visited: 0
-  monologue: []
+  repeatable: 1
+  monologue:
+  - It looks like a poster for one of the latest best selling romance novels starring
+    an anthropormorphic harpoon gun named Mick.
+  - '...Yeah, alright.'
+  - Wait, I think this might be part of that other poster over there. "...but their
+    love could level mountains."
+  - I am moderately concerned about the idea of these two being star-crossed lovers,
+    but maybe these posters could give me a clue...
 --- !u!1001 &532620902
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6952,6 +6967,7 @@ MonoBehaviour:
   location: {fileID: 1007365370}
   interactCollider: {fileID: 0}
   visited: 0
+  repeatable: 0
   monologue: []
 --- !u!1 &595425768
 GameObject:
@@ -7698,7 +7714,17 @@ MonoBehaviour:
   location: {fileID: 1679107068}
   interactCollider: {fileID: 0}
   visited: 0
-  monologue: []
+  repeatable: 0
+  monologue:
+  - '...Okay, what is this supposed to be?'
+  - I think it's some sort of shrine that just so happens to be covered in food.
+  - '...Yeah, it''s totally obvious, right? It looks like something is supposed to
+    be sitting on top of this pedestal here. '
+  - There's a name plate in front that has some sort of sliding cover. "An epitaph
+    to my most prized and precious stuffy friend..."
+  - Not gonna lie, I'm getting a little freaked out by this person's office, but I
+    think if I find the toy that's supposed to go here, the name plate will show me
+    this toy's name.
 --- !u!1 &728102739
 GameObject:
   m_ObjectHideFlags: 0
@@ -9313,6 +9339,7 @@ MonoBehaviour:
   location: {fileID: 1679107068}
   interactCollider: {fileID: 0}
   visited: 0
+  repeatable: 0
   monologue: []
 --- !u!65 &888098087
 BoxCollider:
@@ -10225,6 +10252,7 @@ MonoBehaviour:
   location: {fileID: 1679107068}
   interactCollider: {fileID: 0}
   visited: 0
+  repeatable: 0
   monologue: []
 --- !u!65 &952433382
 BoxCollider:
@@ -10762,6 +10790,7 @@ MonoBehaviour:
   location: {fileID: 1625291180}
   interactCollider: {fileID: 0}
   visited: 0
+  repeatable: 0
   monologue: []
 --- !u!82 &1007365373
 AudioSource:
@@ -11841,6 +11870,7 @@ MonoBehaviour:
   location: {fileID: 1679107068}
   interactCollider: {fileID: 0}
   visited: 0
+  repeatable: 0
   monologue: []
 --- !u!1 &1095126707
 GameObject:
@@ -14623,13 +14653,9 @@ MonoBehaviour:
   camLoc: {fileID: 1956669368}
   readyToGrab: 0
   minInteractDist: 15
-  visitedPC: 0
   openedPC: 0
-  visitedFlowerCabinet: 0
   openedFlowerCabinet: 0
-  visitedTablet: 0
   openedTablet: 0
-  visitedDiploma: 0
 --- !u!1 &1358564239
 GameObject:
   m_ObjectHideFlags: 0
@@ -14743,6 +14769,7 @@ MonoBehaviour:
   location: {fileID: 1679107068}
   interactCollider: {fileID: 0}
   visited: 0
+  repeatable: 0
   monologue: []
 --- !u!1 &1368994659
 GameObject:
@@ -15493,6 +15520,7 @@ MonoBehaviour:
   location: {fileID: 1625291180}
   interactCollider: {fileID: 0}
   visited: 0
+  repeatable: 0
   monologue: []
 --- !u!1 &1459414025
 GameObject:
@@ -17562,6 +17590,7 @@ MonoBehaviour:
   location: {fileID: 1679107068}
   interactCollider: {fileID: 0}
   visited: 0
+  repeatable: 0
   monologue: []
 --- !u!135 &1625291181
 SphereCollider:
@@ -17673,6 +17702,7 @@ MonoBehaviour:
   location: {fileID: 1679107068}
   interactCollider: {fileID: 0}
   visited: 0
+  repeatable: 0
   monologue: []
 --- !u!135 &1640472781
 SphereCollider:
@@ -17793,6 +17823,7 @@ MonoBehaviour:
   location: {fileID: 1625291180}
   interactCollider: {fileID: 0}
   visited: 0
+  repeatable: 0
   monologue: []
 --- !u!114 &1645112870
 MonoBehaviour:
@@ -17815,7 +17846,7 @@ MonoBehaviour:
   - {fileID: 1153856303}
   lockScreen: {fileID: 83490069}
   screenshot: {fileID: 543863730}
-  enableTree: {fileID: 158183397}
+  enableKey: {fileID: 158183397}
   audioClips:
   - {fileID: 8300000, guid: 7e6683eafa1268e4f90e4509c88529ab, type: 3}
   - {fileID: 8300000, guid: 53709c9b023336a4c8f3d4569c1d3f80, type: 3}
@@ -18459,6 +18490,7 @@ MonoBehaviour:
   location: {fileID: 1863170365}
   interactCollider: {fileID: 0}
   visited: 0
+  repeatable: 0
   monologue: []
 --- !u!65 &1679107071
 BoxCollider:
@@ -18506,7 +18538,11 @@ MonoBehaviour:
   location: {fileID: 1679107068}
   interactCollider: {fileID: 0}
   visited: 0
-  monologue: []
+  repeatable: 1
+  monologue:
+  - 'This shelf is as messy and unorganized as most people''s cyber security habits. '
+  - (If he were real, Wolfrid would be looking at you expectingly as if he just filmed
+    an episode of The Office).
 --- !u!65 &1684309129
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18679,6 +18715,7 @@ MonoBehaviour:
   location: {fileID: 1679107068}
   interactCollider: {fileID: 0}
   visited: 0
+  repeatable: 0
   monologue: []
 --- !u!4 &1746383024 stripped
 Transform:
@@ -19393,6 +19430,7 @@ MonoBehaviour:
   location: {fileID: 1679107068}
   interactCollider: {fileID: 0}
   visited: 0
+  repeatable: 0
   monologue: []
 --- !u!1 &1820794326
 GameObject:
@@ -19587,7 +19625,14 @@ MonoBehaviour:
   location: {fileID: 1679107068}
   interactCollider: {fileID: 0}
   visited: 0
-  monologue: []
+  repeatable: 1
+  monologue:
+  - It looks like a poster for one of the latest best selling romance novels starring
+    a whale named Goby.
+  - '"Their friendship is forbidden..."'
+  - Weird. It looks like part of the poster is missing, the sentence cuts off half
+    way.
+  - But now I want to know about this aquatic mammal's notorious relationships!
 --- !u!1 &1837376231
 GameObject:
   m_ObjectHideFlags: 0
@@ -19975,6 +20020,7 @@ MonoBehaviour:
   location: {fileID: 1679107068}
   interactCollider: {fileID: 0}
   visited: 0
+  repeatable: 0
   monologue: []
 --- !u!65 &1851464075
 BoxCollider:
@@ -20241,6 +20287,7 @@ MonoBehaviour:
   location: {fileID: 0}
   interactCollider: {fileID: 0}
   visited: 0
+  repeatable: 0
   monologue: []
 --- !u!65 &1863170366
 BoxCollider:
@@ -21220,7 +21267,11 @@ MonoBehaviour:
   location: {fileID: 1625291180}
   interactCollider: {fileID: 0}
   visited: 0
-  monologue: []
+  repeatable: 0
+  monologue:
+  - It's a garbage can.
+  - I'm not much of a dumpster diver... but wait, what's that?
+  - It looks like there's some sort of broken toy at the bottom of the can.
 --- !u!1001 &1925904072
 PrefabInstance:
   m_ObjectHideFlags: 0
