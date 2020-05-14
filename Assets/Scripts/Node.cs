@@ -20,6 +20,7 @@ public class Node : MonoBehaviour
     public BoxCollider interactCollider;
 
     public bool visited;
+    public bool repeatable;
     public string[] monologue;
 
     void Start()

@@ -10880,6 +10880,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Pickup
       objectReference: {fileID: 0}
+    - target: {fileID: 177676, guid: 3fa2a79e7a110e640b32488741ea714b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 419050, guid: 3fa2a79e7a110e640b32488741ea714b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.039
@@ -17811,7 +17815,7 @@ MonoBehaviour:
   - {fileID: 1153856303}
   lockScreen: {fileID: 83490069}
   screenshot: {fileID: 543863730}
-  enableTree: {fileID: 237798702}
+  enableTree: {fileID: 158183397}
   audioClips:
   - {fileID: 8300000, guid: 7e6683eafa1268e4f90e4509c88529ab, type: 3}
   - {fileID: 8300000, guid: 53709c9b023336a4c8f3d4569c1d3f80, type: 3}
