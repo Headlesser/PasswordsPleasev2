@@ -8654,7 +8654,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: 
-  sprite: {fileID: 21300094, guid: 148a7416d4c344a42bb28cb23ee31708, type: 3}
+  sprite: {fileID: 21300000, guid: c1e6e1f14ac68c04bbc00948a3a02b9f, type: 3}
   dialogue: []
   readyToGrab: 0
   otherPieces:
@@ -14508,7 +14508,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: 
-  sprite: {fileID: 21300094, guid: 148a7416d4c344a42bb28cb23ee31708, type: 3}
+  sprite: {fileID: 21300000, guid: 105ee93488191824ba323c9f4e97504c, type: 3}
   dialogue: []
   readyToGrab: 0
   otherPieces:
@@ -15579,7 +15579,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: 
-  sprite: {fileID: 21300094, guid: 148a7416d4c344a42bb28cb23ee31708, type: 3}
+  sprite: {fileID: 21300000, guid: 1c0f706eae853ba49aa91b16e8176cb1, type: 3}
   dialogue:
   - Hi
   readyToGrab: 0
@@ -19154,7 +19154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: 
-  sprite: {fileID: 21300094, guid: 148a7416d4c344a42bb28cb23ee31708, type: 3}
+  sprite: {fileID: 21300000, guid: 656f054f526923a40923eb764e1c153a, type: 3}
   dialogue: []
   readyToGrab: 0
   otherPieces:
