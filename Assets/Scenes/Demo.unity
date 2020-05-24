@@ -4264,8 +4264,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.8007355, y: 2.0284514, z: 0.4770975}
-  m_Center: {x: 0, y: 1.0142257, z: 0}
+  m_Size: {x: 0.8007355, y: 2.0284514, z: 0.7181671}
+  m_Center: {x: 0.000000028737748, y: 1.0142257, z: 0.12053487}
 --- !u!114 &346330010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8795,7 +8795,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 826060525}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.8253655, y: 0.85891867, z: 12.586111}
+  m_LocalPosition: {x: 10.777, y: -0.434, z: 11.781}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 825963215}
@@ -8865,7 +8865,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   sprite: {fileID: 21300000, guid: c1e6e1f14ac68c04bbc00948a3a02b9f, type: 3}
-  dialogue: []
+  dialogue:
+  - It's a piece of some sort of toy.
   readyToGrab: 0
   otherPieces:
   - {fileID: 1325765027}
@@ -15121,7 +15122,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   sprite: {fileID: 21300000, guid: 105ee93488191824ba323c9f4e97504c, type: 3}
-  dialogue: []
+  dialogue:
+  - It's a piece of some kind of toy.
   readyToGrab: 0
   otherPieces:
   - {fileID: 826060525}
@@ -16192,7 +16194,12 @@ MonoBehaviour:
   name: 
   sprite: {fileID: 21300000, guid: 1c0f706eae853ba49aa91b16e8176cb1, type: 3}
   dialogue:
-  - Hi
+  - Let's see, if I fit the pieces together like this...
+  - There we go! I've fixed the broken stuffed toy. I knew those seamstress classes
+    would come in handy.
+  - More importantly though, is this a banana? Really? Their favorite toy is a banana?
+    If the name is banana I'm going to scream, but for some reason I feel like there
+    might be more to it than just that.
   readyToGrab: 0
 --- !u!1 &1444100478
 GameObject:
@@ -20064,7 +20071,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: 
   sprite: {fileID: 21300000, guid: 656f054f526923a40923eb764e1c153a, type: 3}
-  dialogue: []
+  dialogue:
+  - It's a piece of some kind of toy.
   readyToGrab: 0
   otherPieces:
   - {fileID: 826060525}
