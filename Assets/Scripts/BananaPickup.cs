@@ -14,11 +14,11 @@ public class BananaPickup : PickUpable
         
         piecesCollected++;
         base.Interact();
-        print(piecesCollected);
+        //print(piecesCollected);
 
         if (piecesCollected >= 3)
         {
-            print("beep");
+            //print("beep");
             foreach (GameObject obj in otherPieces)
             {
                 InventoryManager.invManager.RemoveObject(obj);

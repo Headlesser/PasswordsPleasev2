@@ -86,14 +86,14 @@ public class InventoryManager : MonoBehaviour
 
     public void InventorySelected(int slot)
     {
-        if (itemSelected != slot - 1) //if an item other than the one currently selected was clicked
+        if ((itemSelected != slot - 1) && (Inventory.Count >= slot)) //if an item other than the one currently selected was clicked
         {
             if (itemSelected != -1)
                 gameObject.transform.GetChild(itemSelected).GetComponent<Image>().color = unselectedColor; //set previously selected item back to unselected
             itemSelected = slot - 1;
             gameObject.transform.GetChild(slot - 1).GetComponent<Image>().color = selectedColor; //set newly selected item to selected color
         }
-        else
+        else if (itemSelected != -1)
         {
             gameObject.transform.GetChild(itemSelected).GetComponent<Image>().color = unselectedColor;
             itemSelected = -1; //set itemSelected to its null value
