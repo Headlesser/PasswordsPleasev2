@@ -15,13 +15,13 @@ public class GameManager : MonoBehaviour
     public float minInteractDist;
 
     //GAME STATE BOOLS
-    public bool visitedPC;
+    //public bool visitedPC;
     public bool openedPC;
-    public bool visitedFlowerCabinet;
+    //public bool visitedFlowerCabinet;
     public bool openedFlowerCabinet;
-    public bool visitedTablet;
+    //public bool visitedTablet;
     public bool openedTablet;
-    public bool visitedDiploma;
+    //public bool visitedDiploma;
 
     private void Awake()
     {
@@ -79,10 +79,10 @@ public class GameManager : MonoBehaviour
     //Check for dialogue
     public void Monologue(Node visiting)
     {
-        if(!visiting.visited && visiting.monologue.Length > 0) //Check to see if current node has been visited and if it has a monologue to play
+        if(!visiting.visited && visiting.monologue.Length > 0 || visiting.repeatable && visiting.monologue.Length > 0) //Check to see if current node has been visited and if it has a monologue to play
         {
             string[] speech = visiting.monologue;
-            visitedPC = true;
+            //visitedPC = true;
             //string[] speech = {"It looks like the computer needs a password to log on. While I could try the brute force method, that could take quite a while if it's not something obvious.", "Huh? The owner left a clue on this sticky note.", "I wonder if they may have written anything else useful down somewhere... I should probably look around before I try guessing." };
             DialogueManager.diagMng.UpdateSpeech(speech);
             DialogueManager.diagMng.Say(speech[0]);
