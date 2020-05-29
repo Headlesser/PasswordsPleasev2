@@ -1109,11 +1109,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sharedProfile: {fileID: 11400000, guid: 2e4b4b48b5987964abbbe21a59bfb19e, type: 2}
-  isGlobal: 1
-  blendDistance: 0
-  weight: 1
-  priority: 0
 --- !u!4 &68537253
 Transform:
   m_ObjectHideFlags: 0
@@ -1887,8 +1882,13 @@ MonoBehaviour:
   location: {fileID: 1679107068}
   interactCollider: {fileID: 361052919}
   visited: 0
-  repeatable: 0
-  monologue: []
+  repeatable: 1
+  monologue:
+  - It's a locked cabinet, which definitely means there's something I need inside
+    it.
+  - Or maybe that's just my obsessive and thieving nature calling out to me.
+  - Whatever the case, there's a keyhole here on the side. There must be a key laying
+    around here that fits.
 --- !u!1 &87580720 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100004, guid: 3a1ad3eba92335f40b80b088b47f812e,
@@ -6305,11 +6305,10 @@ MonoBehaviour:
     but maybe these posters could give me a clue...
   - You know, this poster actually reminds me of spear phishing.
   - That's the kind of phishing that occurs when specific individuals are targetted
-    with a phishing attack, though the attacker often tries to gather personal information
-    from their victim to increase success. (Kind of like what I'm doing right now.)
-    It's a lot more common than one might think. (Though it might not involve someone
-    breaking into your office very often). It's important to be able to recognize
-    illegitimate security inquiries.
+    with fake emails or login screens, though the attacker often tries to gather personal
+    information from their victim to increase success. (Kind of like what I'm doing
+    right now.) Paying attention to things like email names or link urls could easily
+    protect people from falling for attacks like this.
   - Alright, inner monologue over. Maybe these posters can help me answer one of those
     security questions?
 --- !u!1001 &532620902
@@ -6470,54 +6469,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeTrigger: {fileID: 534669905}
-  volumeLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  stopNaNPropagation: 1
-  finalBlitToCameraTarget: 0
-  antialiasingMode: 1
-  temporalAntialiasing:
-    jitterSpread: 0.75
-    sharpness: 0.25
-    stationaryBlending: 0.95
-    motionBlending: 0.85
-  subpixelMorphologicalAntialiasing:
-    quality: 2
-  fastApproximateAntialiasing:
-    fastMode: 0
-    keepAlpha: 0
-  fog:
-    enabled: 1
-    excludeSkybox: 1
-  debugLayer:
-    lightMeter:
-      width: 512
-      height: 256
-      showCurves: 1
-    histogram:
-      width: 512
-      height: 256
-      channel: 3
-    waveform:
-      exposure: 0.12
-      height: 256
-    vectorscope:
-      size: 256
-      exposure: 0.12
-    overlaySettings:
-      linearDepth: 0
-      motionColorIntensity: 4
-      motionGridSize: 64
-      colorBlindnessType: 0
-      colorBlindnessStrength: 1
-  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
-  m_ShowToolkit: 0
-  m_ShowCustomSorter: 0
-  breakBeforeColorGrading: 0
-  m_BeforeTransparentBundles: []
-  m_BeforeStackBundles: []
-  m_AfterStackBundles: []
 --- !u!1 &535122386
 GameObject:
   m_ObjectHideFlags: 0
@@ -11298,7 +11249,12 @@ MonoBehaviour:
   interactCollider: {fileID: 0}
   visited: 0
   repeatable: 0
-  monologue: []
+  monologue:
+  - The computer is already turned on, but it has a login password.
+  - I know from my sources that the pin to that safe is stored on this person's computer.
+  - The password could be anything but... it looks like they wrote down a hint for
+    themselves on this post-it note.
+  - Maybe if I look around the desk I can find out what this hint might be referencing?
 --- !u!82 &1007365373
 AudioSource:
   m_ObjectHideFlags: 0
@@ -15714,8 +15670,15 @@ MonoBehaviour:
   location: {fileID: 1679107068}
   interactCollider: {fileID: 0}
   visited: 0
-  repeatable: 0
-  monologue: []
+  repeatable: 1
+  monologue:
+  - Ah, this is the reason I'm here. It's a safe locked by a 4-digit pin key...
+  - 'My contact told me the... ''object of importance'' they were interested in is
+    kept in here. How they knew that, I don''t know. '
+  - Maybe they're also a secret extremely handsome and skilled thief like myself?
+    I respect that. Didn't want to do the dirty work themselves so they got me to
+    do it.
+  - At least the thrill of the hunt is more than enough reward for me.
 --- !u!1 &1368994659
 GameObject:
   m_ObjectHideFlags: 0
@@ -18986,8 +18949,12 @@ MonoBehaviour:
   location: {fileID: 1625291180}
   interactCollider: {fileID: 0}
   visited: 0
-  repeatable: 0
-  monologue: []
+  repeatable: 1
+  monologue:
+  - This tablet is locked by a 4-digit pin key.
+  - Well, that shouldn't be too hard to crack. If my hunch is right and this person
+    is like most others, they probably chose a year or a date of some kind of significance.
+  - Something they could easily remember or look up...
 --- !u!114 &1645112870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21366,8 +21333,18 @@ MonoBehaviour:
   location: {fileID: 1679107068}
   interactCollider: {fileID: 0}
   visited: 0
-  repeatable: 0
-  monologue: []
+  repeatable: 1
+  monologue:
+  - It's a college diploma. So we have ourselves a learned man and/or woman here,
+    do we? This is just the kind of information someone might use for a password.
+    Let's see here...
+  - '"...We confer upon this mysterious un-named and un-seen victim to Wolfrid''s
+    cybersecurity crimes a degree in Underwater Basket Weaving..."'
+  - '...Well that''s oddly specific and more than a bit unsettling.'
+  - I'll tell you what, though, I can't say I'm not completely jealous. I wish I got
+    to take basket weaving classes in college. Imagine selling that stuff online?
+  - Alright, focus Wolfrid, focus! Enough about baskets, maybe something written on
+    this diploma can help me figure out the password to one of these locked devices?
 --- !u!65 &1851464075
 BoxCollider:
   m_ObjectHideFlags: 0
