@@ -8,18 +8,6 @@ public class CabinetLock : Lock
     public GameObject door;
     public Transform doorDestination;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public override void Locked()
     {
         // string[] speech = { "", "" };
