@@ -27,7 +27,7 @@ public class AltarController : GenericObject
         {
             //print("Banana!");
             banama.SetActive(true);
-            spotlight.GetComponent<Light>().enabled = true;
+            //spotlight.GetComponent<Light>().enabled = true;
             nameplate.SetActive(true);
         }
     }
