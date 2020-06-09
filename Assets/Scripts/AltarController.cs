@@ -9,6 +9,8 @@ public class AltarController : GenericObject
     public GameObject spotlight;
     public GameObject nameplate;
 
+    public string[] dialogue;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +31,8 @@ public class AltarController : GenericObject
             banama.SetActive(true);
             //spotlight.GetComponent<Light>().enabled = true;
             nameplate.SetActive(true);
+            DialogueManager.diagMng.UpdateSpeech(dialogue);
+            DialogueManager.diagMng.Say(dialogue[0]);
         }
     }
 }
