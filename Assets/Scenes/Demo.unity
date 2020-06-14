@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3901,6 +3901,14 @@ MonoBehaviour:
   banama: {fileID: 1442371250}
   spotlight: {fileID: 0}
   nameplate: {fileID: 76913366}
+  dialogue:
+  - That actually worked? I'm speechless. Isn't this going a bit overboard?
+  - '...And more importantly, Banamaba? Really? I have to admit I''m surprised. I
+    thought the answer would be something even more obvious like just switching one
+    of the letters. Way to go above and beyond.'
+  - Well, at least I have the answer to that security question... If this person didn't
+    have an entire shrine dedicated to their stuffed toy that may have been harder
+    to guess.
 --- !u!1 &317658904
 GameObject:
   m_ObjectHideFlags: 0
@@ -15111,7 +15119,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1325765025}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.10245816, y: 0.1381554, z: -0.000000038146972}
+  m_LocalPosition: {x: -0.02, y: 0.12, z: -0.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1325534595}
