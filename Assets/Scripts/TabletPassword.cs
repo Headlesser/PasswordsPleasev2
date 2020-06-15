@@ -17,6 +17,8 @@ public class TabletPassword : MonoBehaviour
     [SerializeField] AudioClip[] audioClips;
     [SerializeField] Animation shakeAnimation;
 
+    public string[] dialogue;
+
     private void Start()
     {
         audio = GetComponent<AudioSource>();
@@ -61,9 +63,11 @@ public class TabletPassword : MonoBehaviour
         lockScreen.SetActive(false);
         screenshot.SetActive(true);
         GameManager.gameManager.openedTablet = true;
-        GameManager.gameManager.Monologue(GameManager.gameManager.currentNode);
+        //GameManager.gameManager.Monologue(GameManager.gameManager.currentNode);
         enableKey.SetActive(true);
-        Debug.Log(enableKey.activeSelf);
+        //Debug.Log(enableKey.activeSelf);
+        DialogueManager.diagMng.UpdateSpeech(dialogue);
+        DialogueManager.diagMng.Say(dialogue[0]);
 
     }
 

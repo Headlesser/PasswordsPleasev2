@@ -7,6 +7,7 @@ public class CabinetLock : Lock
 
     public GameObject door;
     public Transform doorDestination;
+    public string[] dialogue;
 
     public override void Locked()
     {
@@ -20,6 +21,8 @@ public class CabinetLock : Lock
     {
         door.transform.position = doorDestination.position;
         GameManager.gameManager.openedFlowerCabinet = true;
-        GameManager.gameManager.Monologue(GameManager.gameManager.currentNode);
+        //GameManager.gameManager.Monologue(GameManager.gameManager.currentNode);
+        DialogueManager.diagMng.UpdateSpeech(dialogue);
+        DialogueManager.diagMng.Say(dialogue[0]);
     }
 }

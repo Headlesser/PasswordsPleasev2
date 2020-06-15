@@ -4504,6 +4504,12 @@ MonoBehaviour:
   locationNode: {fileID: 87580718}
   door: {fileID: 87580720}
   doorDestination: {fileID: 491972222}
+  dialogue:
+  - Aha, see? You still got it, Wolfrid. I knew a suspiciously locked and totally
+    inconspicuous-looking cabinet would have something I needed in it.
+  - This folder is chock full of a pristine collection of finely pressed marigolds.
+  - It's a pretty flower, I'll admit. At least this person didn't just use 'Rose'
+    again. That would've made this way too easy.
 --- !u!1001 &368993006
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19006,6 +19012,14 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0232f0ffb3b8baf48bec82596780ca28, type: 3}
   - {fileID: 8300000, guid: 8fc21356b0b7cae488da5f8c8ead094f, type: 3}
   shakeAnimation: {fileID: 1645112871}
+  dialogue:
+  - As I suspected. That was a piece of cake, huh?
+  - Using important dates, specifically years that are extremely easy to guess or
+    are easily found public knowledge don't make for great security pins.
+  - That asside, it looks like whoever owns this tablet left their gallery app idling...
+    And they took a picture of the potted plant in their office?
+  - Wait a minute. There's a key in the pot! Alright, well, just so I put it out there,
+    taking a photo of where your keys are isn't a great idea. Maybe try a keychain?
 --- !u!111 &1645112871
 Animation:
   m_ObjectHideFlags: 0
