@@ -5,10 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
+    AudioSource clickSound;
+
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        clickSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -16,6 +18,7 @@ public class SceneLoader : MonoBehaviour
     {
         if (Input.anyKeyDown)
         {
+            clickSound.Play();
             SceneManager.LoadSceneAsync(1);
         }
     }
