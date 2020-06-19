@@ -38,7 +38,7 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        if (talking && (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)))
+        if (talking && (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) && !GameManager.gameManager.paused)
         {
             if(i < speech.Length)
             {

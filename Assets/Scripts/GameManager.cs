@@ -8,6 +8,9 @@ public class GameManager : MonoBehaviour
     public Node currentNode;
 
     [HideInInspector]
+    public bool paused;
+
+    [HideInInspector]
     public Node start;
     public GameObject camLoc;
     public bool readyToGrab;
@@ -61,7 +64,7 @@ public class GameManager : MonoBehaviour
 
     void CheckHitObj()
     {
-        if (true)
+        if (!paused)
         {
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
