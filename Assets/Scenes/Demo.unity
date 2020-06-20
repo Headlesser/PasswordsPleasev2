@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2769,9 +2769,9 @@ GameObject:
   - component: {fileID: 157987499}
   - component: {fileID: 157987504}
   - component: {fileID: 157987503}
-  - component: {fileID: 157987502}
   - component: {fileID: 157987501}
   - component: {fileID: 157987500}
+  - component: {fileID: 157987505}
   m_Layer: 0
   m_Name: Password Field (1)
   m_TagString: Untagged
@@ -2947,7 +2947,7 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 157987502}
+      - m_Target: {fileID: 0}
         m_MethodName: CheckPassword
         m_Mode: 1
         m_Arguments:
@@ -2963,7 +2963,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 157987502}
+      - m_Target: {fileID: 0}
         m_MethodName: KeyboardClick
         m_Mode: 1
         m_Arguments:
@@ -2983,27 +2983,6 @@ MonoBehaviour:
   m_CaretBlinkRate: 1
   m_CaretWidth: 5
   m_ReadOnly: 0
---- !u!114 &157987502
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 157987498}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bda37f804efa289499bcb61bd458ad99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attempt: 
-  password: Banamaba
-  input: {fileID: 157987498}
-  userName: {fileID: 595425768}
-  incorrectPassword: {fileID: 1954025828}
-  window: {fileID: 1119733244}
-  audio: {fileID: 157987500}
-  incorrectEntryClip: {fileID: 8300000, guid: f0393f721adf45e4dbc200c080f5fd02, type: 3}
-  secondWindow: {fileID: 874889079}
 --- !u!114 &157987503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3041,6 +3020,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 157987498}
   m_CullTransparentMesh: 0
+--- !u!114 &157987505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157987498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb2bbd689bec230499fe68d2f30fb4f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attempt: 
+  password: Banamaba
+  input: {fileID: 157987498}
+  userName: {fileID: 595425768}
+  incorrectPassword: {fileID: 1954025828}
+  window: {fileID: 1119733244}
+  audio: {fileID: 157987500}
+  incorrectEntryClip: {fileID: 8300000, guid: f0393f721adf45e4dbc200c080f5fd02, type: 3}
+  secondWindow: {fileID: 874889079}
 --- !u!1 &158183397 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 177676, guid: 3fa2a79e7a110e640b32488741ea714b,
@@ -11625,9 +11625,9 @@ GameObject:
   - component: {fileID: 946282487}
   - component: {fileID: 946282492}
   - component: {fileID: 946282491}
-  - component: {fileID: 946282490}
   - component: {fileID: 946282489}
   - component: {fileID: 946282488}
+  - component: {fileID: 946282493}
   m_Layer: 0
   m_Name: Password Field (2)
   m_TagString: Untagged
@@ -11803,7 +11803,7 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 946282490}
+      - m_Target: {fileID: 0}
         m_MethodName: CheckPassword
         m_Mode: 1
         m_Arguments:
@@ -11819,7 +11819,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 946282490}
+      - m_Target: {fileID: 0}
         m_MethodName: KeyboardClick
         m_Mode: 1
         m_Arguments:
@@ -11839,27 +11839,6 @@ MonoBehaviour:
   m_CaretBlinkRate: 1
   m_CaretWidth: 5
   m_ReadOnly: 0
---- !u!114 &946282490
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 946282486}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bda37f804efa289499bcb61bd458ad99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attempt: 
-  password: Goby Mick
-  input: {fileID: 946282486}
-  userName: {fileID: 371758035}
-  incorrectPassword: {fileID: 1289442649}
-  window: {fileID: 210893494}
-  audio: {fileID: 946282488}
-  incorrectEntryClip: {fileID: 8300000, guid: f0393f721adf45e4dbc200c080f5fd02, type: 3}
-  secondWindow: {fileID: 874889079}
 --- !u!114 &946282491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11897,6 +11876,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 946282486}
   m_CullTransparentMesh: 0
+--- !u!114 &946282493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 946282486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb2bbd689bec230499fe68d2f30fb4f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attempt: 
+  password: Goby Mick
+  input: {fileID: 946282486}
+  userName: {fileID: 371758035}
+  incorrectPassword: {fileID: 1289442649}
+  window: {fileID: 210893494}
+  audio: {fileID: 946282488}
+  incorrectEntryClip: {fileID: 8300000, guid: f0393f721adf45e4dbc200c080f5fd02, type: 3}
+  secondWindow: {fileID: 874889079}
 --- !u!1 &948052619
 GameObject:
   m_ObjectHideFlags: 0
@@ -14304,9 +14304,9 @@ GameObject:
   - component: {fileID: 1117101900}
   - component: {fileID: 1117101905}
   - component: {fileID: 1117101904}
-  - component: {fileID: 1117101903}
   - component: {fileID: 1117101902}
   - component: {fileID: 1117101901}
+  - component: {fileID: 1117101906}
   m_Layer: 0
   m_Name: Password Field
   m_TagString: Untagged
@@ -14482,7 +14482,7 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1117101903}
+      - m_Target: {fileID: 0}
         m_MethodName: CheckPassword
         m_Mode: 1
         m_Arguments:
@@ -14498,7 +14498,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1117101903}
+      - m_Target: {fileID: 0}
         m_MethodName: KeyboardClick
         m_Mode: 1
         m_Arguments:
@@ -14518,27 +14518,6 @@ MonoBehaviour:
   m_CaretBlinkRate: 1
   m_CaretWidth: 5
   m_ReadOnly: 0
---- !u!114 &1117101903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1117101899}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bda37f804efa289499bcb61bd458ad99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attempt: 
-  password: marigold
-  input: {fileID: 1117101899}
-  userName: {fileID: 1495138490}
-  incorrectPassword: {fileID: 424076241}
-  window: {fileID: 792982781}
-  audio: {fileID: 1117101901}
-  incorrectEntryClip: {fileID: 8300000, guid: f0393f721adf45e4dbc200c080f5fd02, type: 3}
-  secondWindow: {fileID: 874889079}
 --- !u!114 &1117101904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14576,6 +14555,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1117101899}
   m_CullTransparentMesh: 0
+--- !u!114 &1117101906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117101899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb2bbd689bec230499fe68d2f30fb4f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attempt: 
+  password: marigold
+  input: {fileID: 1117101899}
+  userName: {fileID: 1495138490}
+  incorrectPassword: {fileID: 424076241}
+  window: {fileID: 792982781}
+  audio: {fileID: 1117101901}
+  incorrectEntryClip: {fileID: 8300000, guid: f0393f721adf45e4dbc200c080f5fd02, type: 3}
+  secondWindow: {fileID: 874889079}
 --- !u!1 &1119733244
 GameObject:
   m_ObjectHideFlags: 0
