@@ -15,6 +15,9 @@ public class GameManager : MonoBehaviour
     public GameObject camLoc;
     public bool readyToGrab;
 
+    [HideInInspector]
+    public int countAnswer = 0;
+
     public float minInteractDist;
 
     //GAME STATE BOOLS

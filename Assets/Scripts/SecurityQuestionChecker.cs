@@ -14,13 +14,12 @@ public class SecurityQuestionChecker : MonoBehaviour
     public AudioSource audio;
     public AudioClip incorrectEntryClip;
     public GameObject secondWindow;
+    public GameObject parentScreen;
     private bool allAnswered;
-    private int countAnswer = 0;
 
     public void CheckAnswers()
     {
-        Debug.Log(countAnswer);
-        if(countAnswer == 3)
+        if(GameManager.gameManager.countAnswer == 3)
         {
             allAnswered = true;
         }
@@ -28,22 +27,23 @@ public class SecurityQuestionChecker : MonoBehaviour
 
     public void CheckPassword()
     {
-        Debug.Log("Is this even working");
         attempt = GetComponent<InputField>().text;
         if (password.Equals(attempt))
         {
+            GameManager.gameManager.countAnswer ++;
+            //Debug.Log(GameManager.gameManager.countAnswer);
             input.SetActive(false);
             userName.SetActive(false);
             window.SetActive(true);
-            countAnswer += 1;
             CheckAnswers();
             if(secondWindow != null && allAnswered)
             {
                 secondWindow.SetActive(true);
                 GameManager.gameManager.openedPC = true;
                 GameManager.gameManager.Monologue(GameManager.gameManager.currentNode);
+                parentScreen.SetActive(false);
             }
-            GetComponent<AudioSource>().Play();
+            //GetComponent<AudioSource>().Play();
             incorrectPassword.SetActive(false);
         }
         else
@@ -56,7 +56,7 @@ public class SecurityQuestionChecker : MonoBehaviour
 
     public void KeyboardClick()
     {
-        Debug.Log("should be making typing noise?");
+        //Debug.Log("should be making typing noise?");
         audio.pitch = Random.Range(1f, 1.2f);
         audio.Play();
     }

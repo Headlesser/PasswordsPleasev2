@@ -30,7 +30,7 @@ public class PasswordChecker : MonoBehaviour
                 GameManager.gameManager.openedPC = true;
                 GameManager.gameManager.Monologue(GameManager.gameManager.currentNode);
             }
-            GetComponent<AudioSource>().Play();
+            //GetComponent<AudioSource>().Play();
             incorrectPassword.SetActive(false);
         }
         else

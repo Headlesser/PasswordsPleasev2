@@ -2947,7 +2947,7 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 157987505}
         m_MethodName: CheckPassword
         m_Mode: 1
         m_Arguments:
@@ -2963,7 +2963,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 157987505}
         m_MethodName: KeyboardClick
         m_Mode: 1
         m_Arguments:
@@ -3041,6 +3041,7 @@ MonoBehaviour:
   audio: {fileID: 157987500}
   incorrectEntryClip: {fileID: 8300000, guid: f0393f721adf45e4dbc200c080f5fd02, type: 3}
   secondWindow: {fileID: 874889079}
+  parentScreen: {fileID: 1116525212}
 --- !u!1 &158183397 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 177676, guid: 3fa2a79e7a110e640b32488741ea714b,
@@ -11803,7 +11804,7 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 946282493}
         m_MethodName: CheckPassword
         m_Mode: 1
         m_Arguments:
@@ -11819,7 +11820,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 946282493}
         m_MethodName: KeyboardClick
         m_Mode: 1
         m_Arguments:
@@ -11897,6 +11898,7 @@ MonoBehaviour:
   audio: {fileID: 946282488}
   incorrectEntryClip: {fileID: 8300000, guid: f0393f721adf45e4dbc200c080f5fd02, type: 3}
   secondWindow: {fileID: 874889079}
+  parentScreen: {fileID: 1116525212}
 --- !u!1 &948052619
 GameObject:
   m_ObjectHideFlags: 0
@@ -14482,7 +14484,7 @@ MonoBehaviour:
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1117101906}
         m_MethodName: CheckPassword
         m_Mode: 1
         m_Arguments:
@@ -14498,7 +14500,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1117101906}
         m_MethodName: KeyboardClick
         m_Mode: 1
         m_Arguments:
@@ -14576,6 +14578,7 @@ MonoBehaviour:
   audio: {fileID: 1117101901}
   incorrectEntryClip: {fileID: 8300000, guid: f0393f721adf45e4dbc200c080f5fd02, type: 3}
   secondWindow: {fileID: 874889079}
+  parentScreen: {fileID: 1116525212}
 --- !u!1 &1119733244
 GameObject:
   m_ObjectHideFlags: 0
