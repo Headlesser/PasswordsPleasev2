@@ -52,7 +52,7 @@ public class GameManager : MonoBehaviour
         bool triggeredOnce = false; //Keeps the camera from zooming back twice in a row.
         //allow the player to 'back up' from a node by pressing right click
         //This is triggering twice for some reason if I'm moving back from a prop.
-        if (Input.GetMouseButtonDown(1) && !triggeredOnce)
+        if (Input.GetMouseButtonDown(1) && !triggeredOnce && !paused)
         {
             print("I have changed my current location to: " + currentNode);
             currentNode.location.MoveToNode();

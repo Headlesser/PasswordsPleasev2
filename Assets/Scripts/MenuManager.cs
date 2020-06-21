@@ -17,15 +17,22 @@ public class MenuManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         if (Input.GetKey(KeyCode.Escape))
         {
             ToggleMenu();
         }
+        */
     }
 
-    public void ToggleMenu()
+    public void PauseGame()
     {
         GameManager.gameManager.paused = !GameManager.gameManager.paused;
+        ToggleMenu();
+    }
+
+    private void ToggleMenu()
+    {        
         menu.SetActive(!menu.activeInHierarchy);
     }
 

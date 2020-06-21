@@ -36,7 +36,7 @@ public class Node : MonoBehaviour
 
     public void MoveToNode()
     {
-        if (!DialogueManager.diagMng.talking)
+        if (!DialogueManager.diagMng.talking && !GameManager.gameManager.paused)
         {
             //leave the existing node
             if (GameManager.gameManager.currentNode != null)
