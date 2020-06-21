@@ -27,12 +27,12 @@ public class MenuManager : MonoBehaviour
 
     public void PauseGame()
     {
-        GameManager.gameManager.paused = !GameManager.gameManager.paused;
         ToggleMenu();
     }
 
     private void ToggleMenu()
-    {        
+    { 
+        GameManager.gameManager.paused = !GameManager.gameManager.paused;       
         menu.SetActive(!menu.activeInHierarchy);
     }
 

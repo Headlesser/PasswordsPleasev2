@@ -3381,7 +3381,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6033893171447580921}
   - component: {fileID: 6033893171447878807}
-  - component: {fileID: 6033893171447878806}
   m_Layer: 0
   m_Name: Safe
   m_TagString: Untagged
@@ -3417,23 +3416,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.4812968, y: 2.3893232, z: 2.4222138}
   m_Center: {x: -0.1525451, y: 2.9241557, z: 0.03840041}
---- !u!114 &6033893171447878806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6033893171447878809}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c82f20c4c3768ac40a847a1b802ed555, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camPos: {fileID: 0}
-  reachableNodes: []
-  col: {fileID: 0}
-  camSpeed: 0.5
-  loc: {fileID: 0}
 --- !u!1 &6033893171447878811
 GameObject:
   m_ObjectHideFlags: 0
@@ -4150,7 +4132,7 @@ GameObject:
   - component: {fileID: 6033893171447878902}
   - component: {fileID: 6033893171447878900}
   m_Layer: 0
-  m_Name: Box04
+  m_Name: CodeLock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
