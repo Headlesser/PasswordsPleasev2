@@ -16662,7 +16662,7 @@ MonoBehaviour:
   - As I suspected. That was a piece of cake, huh?
   - Using important dates, specifically years that are extremely easy to guess or
     are easily found public knowledge don't make for great security pins.
-  - That asside, it looks like whoever owns this tablet left their gallery app idling...
+  - That aside, it looks like whoever owns this tablet left their gallery app idling...
     And they took a picture of the potted plant in their office?
   - Wait a minute. There's a key in the pot! Alright, well, just so I put it out there,
     taking a photo of where your keys are isn't a great idea. Maybe try a keychain?
@@ -21361,6 +21361,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: HUD
       objectReference: {fileID: 0}
+    - target: {fileID: 2361929762012227694, guid: 133e7115ab63f944a962790bd3c1e1be,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1353245941}
+    - target: {fileID: 2361929762988366334, guid: 133e7115ab63f944a962790bd3c1e1be,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1353245941}
     - target: {fileID: 2361929762854430603, guid: 133e7115ab63f944a962790bd3c1e1be,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21736,11 +21746,6 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2361929762988366334, guid: 133e7115ab63f944a962790bd3c1e1be,
-        type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1353245941}
     - target: {fileID: 2361929762967449400, guid: 133e7115ab63f944a962790bd3c1e1be,
         type: 3}
       propertyPath: m_havePropertiesChanged
@@ -21751,11 +21756,6 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 2361929762012227694, guid: 133e7115ab63f944a962790bd3c1e1be,
-        type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1353245941}
     - target: {fileID: 2361929761730530573, guid: 133e7115ab63f944a962790bd3c1e1be,
         type: 3}
       propertyPath: m_havePropertiesChanged
@@ -21900,6 +21900,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 6730555566706418235, guid: d519d6a78e499ef49a8b8d4ff8804704,
+        type: 3}
+      propertyPath: camLoc
+      value: 
+      objectReference: {fileID: 1956669368}
+    - target: {fileID: 6730555566706418234, guid: d519d6a78e499ef49a8b8d4ff8804704,
+        type: 3}
+      propertyPath: sfxSlider
+      value: 
+      objectReference: {fileID: 928342475}
+    - target: {fileID: 6730555566706418234, guid: d519d6a78e499ef49a8b8d4ff8804704,
+        type: 3}
+      propertyPath: musicSlider
+      value: 
+      objectReference: {fileID: 220467291}
+    - target: {fileID: 6730555566706418234, guid: d519d6a78e499ef49a8b8d4ff8804704,
+        type: 3}
+      propertyPath: musicTracks.Array.data[0]
+      value: 
+      objectReference: {fileID: 57143123}
     - target: {fileID: 6730555566706418236, guid: d519d6a78e499ef49a8b8d4ff8804704,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21955,25 +21975,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6730555566706418235, guid: d519d6a78e499ef49a8b8d4ff8804704,
-        type: 3}
-      propertyPath: camLoc
-      value: 
-      objectReference: {fileID: 1956669368}
-    - target: {fileID: 6730555566706418234, guid: d519d6a78e499ef49a8b8d4ff8804704,
-        type: 3}
-      propertyPath: sfxSlider
-      value: 
-      objectReference: {fileID: 928342475}
-    - target: {fileID: 6730555566706418234, guid: d519d6a78e499ef49a8b8d4ff8804704,
-        type: 3}
-      propertyPath: musicSlider
-      value: 
-      objectReference: {fileID: 220467291}
-    - target: {fileID: 6730555566706418234, guid: d519d6a78e499ef49a8b8d4ff8804704,
-        type: 3}
-      propertyPath: musicTracks.Array.data[0]
-      value: 
-      objectReference: {fileID: 57143123}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d519d6a78e499ef49a8b8d4ff8804704, type: 3}
