@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class SoundManager : MonoBehaviour
 {
@@ -11,31 +12,16 @@ public class SoundManager : MonoBehaviour
     public AudioSource[] soundEffects;
     public AudioSource[] musicTracks;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField] AudioMixer musicMixer;
+    [SerializeField] AudioMixer sfxMixer;
 
     public void EditSFXVolume()
     {
-        foreach(AudioSource sfx in soundEffects)
-        {
-            sfx.volume = sfxSlider.value;
-        }
+        sfxMixer.SetFloat("SFXMasterVolume", sfxSlider.value);
     }
 
     public void EditMusicVolume()
     {
-        foreach (AudioSource track in musicTracks)
-        {
-            track.volume = musicSlider.value;
-        }
+        musicMixer.SetFloat("MusicMasterVolume", musicSlider.value);
     }
 }

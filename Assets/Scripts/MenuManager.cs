@@ -8,12 +8,6 @@ public class MenuManager : MonoBehaviour
     public GameObject menu;
     public GameObject[] subMenus;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -31,8 +25,8 @@ public class MenuManager : MonoBehaviour
     }
 
     private void ToggleMenu()
-    { 
-        GameManager.gameManager.paused = !GameManager.gameManager.paused;       
+    {
+        GameManager.gameManager.paused = !GameManager.gameManager.paused;
         menu.SetActive(!menu.activeInHierarchy);
     }
 
