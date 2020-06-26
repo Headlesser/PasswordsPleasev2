@@ -20,6 +20,8 @@ public class CodeLock : MonoBehaviour
     [SerializeField] AudioClip deniedClip;
     [SerializeField] AudioClip acceptedClip;
 
+    public string[] dialogue;
+
     private void Start()
     {
         openSpeed = 0.1f;
@@ -43,6 +45,8 @@ public class CodeLock : MonoBehaviour
             safeAudio.Play();
             audioSource.Play();
             SetDisplay();
+            DialogueManager.diagMng.UpdateSpeech(dialogue);
+            DialogueManager.diagMng.Say(dialogue[0]);
         }
         else
         {

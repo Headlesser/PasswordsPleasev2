@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -13897,7 +13897,8 @@ MonoBehaviour:
   - Maybe they're also a secret extremely handsome and skilled thief like myself?
     I respect that. Didn't want to do the dirty work themselves so they got me to
     do it.
-  - At least the thrill of the hunt is more than enough reward for me.
+  - Anyway, I'm not going to be able to open this safe without the code. Best not
+    to waste any more time and start by looking at that PC over there.
 --- !u!1 &1386094729
 GameObject:
   m_ObjectHideFlags: 0
@@ -21628,26 +21629,6 @@ PrefabInstance:
       propertyPath: m_Value
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2361929762988366334, guid: 133e7115ab63f944a962790bd3c1e1be,
-        type: 3}
-      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1353245941}
-    - target: {fileID: 2361929762988366334, guid: 133e7115ab63f944a962790bd3c1e1be,
-        type: 3}
-      propertyPath: m_MinValue
-      value: -80
-      objectReference: {fileID: 0}
-    - target: {fileID: 2361929762988366334, guid: 133e7115ab63f944a962790bd3c1e1be,
-        type: 3}
-      propertyPath: m_MaxValue
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2361929762988366334, guid: 133e7115ab63f944a962790bd3c1e1be,
-        type: 3}
-      propertyPath: m_Value
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2361929762854430603, guid: 133e7115ab63f944a962790bd3c1e1be,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21751,6 +21732,26 @@ PrefabInstance:
     - target: {fileID: 2361929762854430603, guid: 133e7115ab63f944a962790bd3c1e1be,
         type: 3}
       propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2361929762988366334, guid: 133e7115ab63f944a962790bd3c1e1be,
+        type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1353245941}
+    - target: {fileID: 2361929762988366334, guid: 133e7115ab63f944a962790bd3c1e1be,
+        type: 3}
+      propertyPath: m_MinValue
+      value: -80
+      objectReference: {fileID: 0}
+    - target: {fileID: 2361929762988366334, guid: 133e7115ab63f944a962790bd3c1e1be,
+        type: 3}
+      propertyPath: m_MaxValue
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2361929762988366334, guid: 133e7115ab63f944a962790bd3c1e1be,
+        type: 3}
+      propertyPath: m_Value
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2361929761913381747, guid: 133e7115ab63f944a962790bd3c1e1be,
@@ -22290,9 +22291,55 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 6033893171447878902, guid: 89365febb308f004ba0ae5dc082871fe,
         type: 3}
+      propertyPath: dialogue.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6033893171447878902, guid: 89365febb308f004ba0ae5dc082871fe,
+        type: 3}
       propertyPath: safeAudio
       value: 
       objectReference: {fileID: 2093082494}
+    - target: {fileID: 6033893171447878902, guid: 89365febb308f004ba0ae5dc082871fe,
+        type: 3}
+      propertyPath: dialogue.Array.data[0]
+      value: Oh my goodness. Is that really...?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6033893171447878902, guid: 89365febb308f004ba0ae5dc082871fe,
+        type: 3}
+      propertyPath: dialogue.Array.data[1]
+      value: It is! What a pristine specimine this is... I've never seen a more immaculate
+        waterfowl made of polymers in my life.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6033893171447878902, guid: 89365febb308f004ba0ae5dc082871fe,
+        type: 3}
+      propertyPath: dialogue.Array.data[2]
+      value: 'And by that I mean it''s a really nice rubber duck. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6033893171447878902, guid: 89365febb308f004ba0ae5dc082871fe,
+        type: 3}
+      propertyPath: dialogue.Array.data[3]
+      value: I suppose that makes sense. Perhaps my contact works as a programmer
+        of some sort? Maybe this rubber duck holds the key to all of their debugging
+        protocols!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6033893171447878902, guid: 89365febb308f004ba0ae5dc082871fe,
+        type: 3}
+      propertyPath: dialogue.Array.data[4]
+      value: I guess I can just ask them about that when I deliver it to them, but
+        I digress. Whoever works in this office made some pretty bad security choices.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6033893171447878902, guid: 89365febb308f004ba0ae5dc082871fe,
+        type: 3}
+      propertyPath: dialogue.Array.data[5]
+      value: All the better for me to get my job done easier, but I would never store
+        my information like this person did. Or use such terrible passphrases. Imagine
+        if I had been here to steal bank or cloud storage information? What a nightmare.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6033893171447878902, guid: 89365febb308f004ba0ae5dc082871fe,
+        type: 3}
+      propertyPath: dialogue.Array.data[6]
+      value: Let's hope people make my job a little harder next time.
+      objectReference: {fileID: 0}
     - target: {fileID: 4791886731817682587, guid: 89365febb308f004ba0ae5dc082871fe,
         type: 3}
       propertyPath: OutputAudioMixerGroup
