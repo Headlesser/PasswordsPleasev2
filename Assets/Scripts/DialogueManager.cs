@@ -42,17 +42,17 @@ public class DialogueManager : MonoBehaviour
     {
         if (talking && (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) && !GameManager.gameManager.paused)
         {
-            if (finalSpeech)
-            {
-                SceneManager.LoadScene(2);
-            }
-            else if (i < speech.Length)
+            if (i < speech.Length)
             {
                 Say(speech[i]);
             }
             else
             {
                 Close();
+                if (finalSpeech)
+                {
+                    SceneManager.LoadScene(2);
+                }
             }
         }
     }

@@ -40,7 +40,7 @@ public class CodeLock : MonoBehaviour
         }
         if (attemptedCode == code)
         {
-            if (finalCode)
+            if (DialogueManager.diagMng.talking == false && finalCode)
             {
                 DialogueManager.diagMng.SetFinalSpeech(true);
             }

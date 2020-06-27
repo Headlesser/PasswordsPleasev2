@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -22339,6 +22339,11 @@ PrefabInstance:
         type: 3}
       propertyPath: dialogue.Array.data[6]
       value: Let's hope people make my job a little harder next time.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6033893171447878902, guid: 89365febb308f004ba0ae5dc082871fe,
+        type: 3}
+      propertyPath: finalCode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4791886731817682587, guid: 89365febb308f004ba0ae5dc082871fe,
         type: 3}
