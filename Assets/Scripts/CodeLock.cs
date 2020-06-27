@@ -34,7 +34,7 @@ public class CodeLock : MonoBehaviour
     {
         if (attemptedCode.Length < 4)
         {
-            Debug.Log("Not Long Enough");
+           // Debug.Log("Not Long Enough");
             safeAudio.clip = deniedClip;
             safeAudio.Play();
         }
@@ -55,7 +55,7 @@ public class CodeLock : MonoBehaviour
         }
         else
         {
-            Debug.Log("Wrong Code");
+           // Debug.Log("Wrong Code");
             attemptedCode = "Enter Code";
             SetDisplay();
             attemptedCode = "";

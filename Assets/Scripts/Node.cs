@@ -36,7 +36,7 @@ public class Node : MonoBehaviour
 
     public void MoveToNode()
     {
-        Debug.Log(GameManager.gameManager.paused);
+        //Debug.Log(GameManager.gameManager.paused);
         if (!DialogueManager.diagMng.talking && !GameManager.gameManager.paused)
         {
             //leave the existing node

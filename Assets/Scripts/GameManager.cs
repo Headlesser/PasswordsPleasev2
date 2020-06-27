@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
         //This is triggering twice for some reason if I'm moving back from a prop.
         if (Input.GetMouseButtonDown(1) && !triggeredOnce && !paused)
         {
-            print("I have changed my current location to: " + currentNode);
+            //print("I have changed my current location to: " + currentNode);
             currentNode.location.MoveToNode();
             triggeredOnce = true;
         }
