@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class DialogueManager : MonoBehaviour
     [HideInInspector] public bool isWaitingForUserInput = false;
     
     Coroutine speaking = null;
+    private bool finalSpeech;
 
     public string[] speech;
     int i = 0;
@@ -40,7 +42,11 @@ public class DialogueManager : MonoBehaviour
     {
         if (talking && (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)) && !GameManager.gameManager.paused)
         {
-            if(i < speech.Length)
+            if (finalSpeech)
+            {
+                SceneManager.LoadScene(2);
+            }
+            else if (i < speech.Length)
             {
                 Say(speech[i]);
             }
@@ -126,5 +132,10 @@ public class DialogueManager : MonoBehaviour
         StopSpeaking();
         speechPanel.SetActive(false);
         talking = false;
+    }
+
+    public void SetFinalSpeech(bool b)
+    {
+        finalSpeech = b;
     }
 }

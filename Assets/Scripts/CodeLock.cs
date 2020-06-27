@@ -9,6 +9,7 @@ public class CodeLock : MonoBehaviour
     public float openSpeed;
     int codeIndex;
     int codeLength;
+    public bool finalCode;
 
     public string code = "";
     public string attemptedCode;
@@ -39,6 +40,10 @@ public class CodeLock : MonoBehaviour
         }
         if (attemptedCode == code)
         {
+            if (finalCode)
+            {
+                DialogueManager.diagMng.SetFinalSpeech(true);
+            }
             StartCoroutine(OpenDoor());
             attemptedCode = "Accepted";
             safeAudio.clip = acceptedClip;
