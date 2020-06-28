@@ -1814,7 +1814,7 @@ MonoBehaviour:
   location: {fileID: 1679107068}
   interactCollider: {fileID: 361052919}
   visited: 0
-  repeatable: 1
+  repeatable: 0
   monologue:
   - It's a locked cabinet, which definitely means there's something I need inside
     it.
@@ -5622,7 +5622,7 @@ MonoBehaviour:
   location: {fileID: 1679107068}
   interactCollider: {fileID: 0}
   visited: 0
-  repeatable: 0
+  repeatable: 1
   monologue:
   - It looks like a poster for one of the latest best selling romance novels starring
     an anthropormorphic harpoon gun named Mick.
@@ -16768,7 +16768,7 @@ MonoBehaviour:
   location: {fileID: 1625291180}
   interactCollider: {fileID: 0}
   visited: 0
-  repeatable: 1
+  repeatable: 0
   monologue:
   - This tablet is locked by a 4-digit pin key.
   - Well, that shouldn't be too hard to crack. If my hunch is right and this person
@@ -18689,7 +18689,7 @@ MonoBehaviour:
   location: {fileID: 1679107068}
   interactCollider: {fileID: 0}
   visited: 0
-  repeatable: 0
+  repeatable: 1
   monologue:
   - It looks like a poster for one of the latest best selling romance novels starring
     a whale named Goby.
