@@ -7,17 +7,6 @@ public class OpenLink : MonoBehaviour
 {
     public Color clickedColor;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void Open(string link)
     {
